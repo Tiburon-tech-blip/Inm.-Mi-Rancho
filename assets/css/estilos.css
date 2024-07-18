@@ -608,16 +608,16 @@ header label {
         top: 80px;
     } 
 
-    /* .texto h2 {
-        font-size: 35px;
+    .texto h1 {
+        font-size: 25px;
         margin-bottom: 15px;
     }
 
-    .texto p {
+    .texto h2 {
         font-size: 15px;
     }
 
-     */
+     
 } 
 
 
