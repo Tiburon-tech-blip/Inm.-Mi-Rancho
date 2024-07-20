@@ -375,7 +375,7 @@ header .navbar .menu li:focus-within > ul, header .navbar .menu li:hover >ul {
 
 /* Ocultamos icono de menu amburgueza y le ponemos color, tamaño y cursor */
 header label {
-    font-size: 40px;
+    font-size: 38px;
     color: #ffffff;
     cursor: pointer;
     display: none;
@@ -417,13 +417,6 @@ header label {
         padding: 0px 5px 0px 5px;
     }
 
-    /* Distancia inferior y tamaño del logo principal*/
-    /* .header .logo .logo2 img {
-        margin-bottom: 15px;
-        height: 42px;
-        width: 42px;
-    } */
-
     /* Ancho del menu osilante */
     .header .navbar .menu li ul {   
         width: 160px;
@@ -441,26 +434,37 @@ header label {
  
     /* Distancia del extremo derecho del menu amburgueza y altura del header*/
     .header {
-        padding: 0px 15px 0px 0px;  
-        height: 80px;
+        padding: 0px 15px 0px 15px;  
+        height: 60px;
     }
+
+    .logo .logo2 {
+        display: flex;
+        align-items: center;
+    }
+    
     /* Distancia del logo principal con respecto a la parte inferior del header*/
     .header .logo .logo2 img {
-        margin-bottom: 15px;
-    }
-
-  /* Estilo de los hijos directos, bordes de las opciones principales */
-    .header .navbar .menu > li {
-    /* Estilo de los bordes isquierdos de las opciones principales */
-    border-left: 3px solid rgb(228, 151, 7, 0.932);
-        
+        margin-top: 0px;
+        height: 35px;
+        width: 35px;
     } 
-
+    
     /* Ocultamos el Titulo del logo principal */
-    .name {
-        display: none;
+    .header .logo .logo2 .name {
+        text-align: center;
+        font-size: 38px;
+        padding-left: 10px;
+        /* display: none; */
     }
 
+    /* Estilo de los hijos directos, bordes de las opciones principales */
+    .header .navbar .menu > li {
+        /* Estilo de los bordes isquierdos de las opciones principales */
+        border-left: 3px solid rgb(228, 151, 7, 0.932);
+            
+    } 
+    
     /* Visibilizamos el logo del menu Amburgueza*/
     .header label {
         display: initial;
@@ -515,10 +519,8 @@ header label {
     background-position: center; 
     height: 100vh;  
 	overflow: hidden;
-    /* box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1); */
-    border-bottom: 2px solid orange; 
+    /* Estilo del borde inferior del slider */
+    border-bottom: 3px solid orange; 
 }
 
 .slider-frame ul {
@@ -547,7 +549,7 @@ header label {
     /*padding: 0 500px 0px 500px;  */
 
     /* Color del texto titulo y parrafo */
-    color: #ffffff;
+    color: var(--texto-color);
      
 }
 
