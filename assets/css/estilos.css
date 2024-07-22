@@ -5,6 +5,10 @@
     --header-color: #8b0000;
     --menu-color: #A52A2A;
     --texto-color: #ffffff;
+    --bordes-color: orange; --bordes-color2: yellow;
+    --link-color: orange;
+
+
 }
 
 /* Selector universal */
@@ -134,7 +138,7 @@ align-items: center;
 /* Separo de extremo a extremo horizontalmente  */
 justify-content: space-between;
 z-index:9999;
-/* Doy margenes internos isquierdo y derecho de 40px para el menu  */
+/* Doy margenes internos isquierdo y derecho de 40px para el menu completo */
 padding-left: 45px;
 padding-right: 45px; 
 } 
@@ -162,6 +166,7 @@ padding-right: 45px;
 .fire a:hover {
     color: #A52A2A;
 } 
+
 
 .fire .Blazing {
     /* color: rgb(255, 115, 0); */
@@ -217,11 +222,9 @@ padding-right: 45px;
      display:flex;
      position: relative;  
      float: left; 
-      
-     /* width: 100%; */
-    /* align-items: center; */
-
 } 
+
+
 .header .navbar .menu {  
     border-radius: 20px;
     /* Distancia de los extremos isquierdo y derecho del menu principal "Bordes derecho y isquierdo"*/
@@ -229,7 +232,7 @@ padding-right: 45px;
     /* sombra de los bordes del menu */
     box-shadow: inset 0 10px 10px rgba(210,105,30,.5), inset 0 -2px 0 rgba(228, 151, 7, 0.932), 0 1px 3px rgba(228, 151, 7, 0.932); 
     /* Color de fondo del menu */
-    background-color: var(--menu); 
+    background-color: var(--menu-color); 
 
 }
  
@@ -262,7 +265,7 @@ padding-right: 45px;
     list-style: none;
 }
 
-/* Fuente y pongo en bloque las opciones principales del menu*/
+/* Estilo de la Fuente y pongo en bloque las opciones principales del menu*/
 .header .navbar .menu li a {
     
     font-size: 20px;
@@ -283,7 +286,7 @@ padding-right: 45px;
 }
 
 
-/* Efecto cunado hago foco en las opciones principales del menu */
+/* Efecto de fondo y texto cuando hago foco en las opciones principales del menu */
 .header .navbar .menu > li:hover > a {  
     /* Color del fondo del texto */
     background: #000000;
@@ -355,9 +358,9 @@ header .navbar .menu li:focus-within > ul, header .navbar .menu li:hover >ul {
     color: #FFC300;
     text-shadow: none;
     /* Tipo de Borde abajo y arriba */
-    border-top: dotted 5px transparent;
+    /* border-top: dotted 5px transparent;
     border-bottom: dotted 5px transparent;
-    transition: all .15s linear;
+    transition: all .15s linear; */
 }
 
 /* Color de funte, cuando hacemos foco en el interior (opciones) del menu osilante */
@@ -394,9 +397,11 @@ header label {
         justify-content: flex-start; 
         align-content: center;
         background-color: var(--header-color);
-        height: 155px;
+        /* height: 155px; */
         /* Tamño de fuente de las opciones principales del menu */
         font-size: 12px;  
+        /*Distancia de los extremos derecho y isquierdo y abajo del menu con respecto al los boedes del header*/
+        padding: 0px 5px 10px 5px;
       
     }
 }
@@ -411,10 +416,10 @@ header label {
         justify-content: flex-start; 
         align-content: center;
         background-color: var(--header-color);
-        height: 150px;    
+        /* height: 150px;     */
         font-size: 10px; 
-        /*Distancia de los extremos derecho y isquierdo del menu con respecto al boede */
-        padding: 0px 5px 0px 5px;
+        /*Distancia de los extremos derecho y isquierdo y abajo del menu con respecto al los boedes del header*/
+        padding: 0px 5px 10px 5px;
     }
 
     /* Ancho del menu osilante */
@@ -435,7 +440,7 @@ header label {
     /* Distancia del extremo derecho del menu amburgueza y altura del header*/
     .header {
         padding: 0px 15px 0px 15px;  
-        height: 60px;
+        height: 60px; 
     }
 
     .logo .logo2 {
@@ -443,17 +448,17 @@ header label {
         align-items: center;
     }
     
-    /* Distancia del logo principal con respecto a la parte inferior del header*/
+    /* Tamaño y Distancia del logo principal con respecto a la parte inferior del header*/
     .header .logo .logo2 img {
-        margin-top: 0px;
+        margin-bottom: 5px;
         height: 35px;
         width: 35px;
     } 
     
-    /* Ocultamos el Titulo del logo principal */
+    /* Estilo para el titulo del logo principal */
     .header .logo .logo2 .name {
         text-align: center;
-        font-size: 38px;
+        font-size: 35px;
         padding-left: 10px;
         /* display: none; */
     }
@@ -508,21 +513,22 @@ header label {
 
 
 
+/* ------------------Comienzo de estilos del main--------------------------------- */
 
-/* -------------------Comienzo de lo estilos del Eslider------------------------ */
+/* -------------------Comienzo de la seccion del Eslider------------------------ */
 
 .slider-frame {
-	/* width: 1280px;*/
-    width: 100%; 
-   
+	width: 100%; 
     background-size: cover; 
     background-position: center; 
-    height: 100vh;  
+    height: 100vh;
+    /*Ocultamos el desbordamiento  */
 	overflow: hidden;
     /* Estilo del borde inferior del slider */
     border-bottom: 3px solid orange; 
 }
 
+/* Colocamos las imagenes en linea con flex con un ancho del 400% por ser 4 imagenes */
 .slider-frame ul {
 	display: flex;
     padding: 0;
@@ -535,7 +541,6 @@ header label {
 	list-style: none;
     position: relative;
 }
-
 
 .texto {
     position: absolute; 
@@ -553,15 +558,29 @@ header label {
      
 }
 
+/* Tamaño del titulo h1 */
 .texto h1 {
     font-size: 6vw;
-    /* margin-top: 135px; */
+}
+
+/* Estilo para el titulo h1 y h2 del slider */
+.fire2 {
+    /* color: rgb(255, 115, 0); */
+    color: var(--texto-color); 
+	text-shadow:
+        0 3px 20px red,
+        0 0 20px red,
+		0 0 10px orange,
+		4px -5px 6px yellow,
+		-4px -10px 10px yellow,
+		0 -10px 30px yellow;
 }
 
 .slider-frame img {
 	width: 100%;
 } 
 
+/* Fotogramas correspandientes a la animacion para el slider */
 @keyframes slide {
 	0% {margin-left: 0;}
 	20% {margin-left: 0;}
@@ -611,13 +630,8 @@ header label {
     /* .texto h2 {
         font-size: 35px;
         margin-bottom: 15px;
-    }
+    }*/
 
-    .texto p {
-        font-size: 15px;
-    }
-
-    */
 } 
 
 @media only screen and (max-width:600px) {
@@ -642,8 +656,150 @@ header label {
     } 
 }
 
-#section2 {
- height: 400px;
- color: red;
+/* ----------------------------Fin seccion slider---------------------------- */
+
+
+
+
+/* ---------------------Comienzo seccion sobre nosotors---------------------------------- */
+
+.main .sobre-nosotros {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*height: 450px;*/
+        padding: 15px 0px 10px 0px;
+        width: 100%;
+        background: var(--header-color);
+        text-shadow: -1px 3px 4px rgba(0, 0, 0, 0.29);
+        box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
+        /* -webkit-box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1); */
+        border-bottom: 3px solid var(--bordes-color);
+} 
+
+.main .sobre-nosotros .sobre-nosotros-img img {
+    border: 3px solid var(--bordes-color);
+    box-shadow: 0px 0px 0px 1px  var(--bordes-color2);
+    margin-right: 30px;
+    margin-left: 30px;  
+}
+
+/* .main .sobre-nosotros .sobre-nosotros-info {
+    text-align: left;
+    width: 45%;
+    color: var(--texto-color);
+} */
+
+/* Estilos para "Acerca de Nosotros" */
+.main .sobre-nosotros .sobre-nosotros-info .nosotros {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+/* Estilo para el h1 */
+.main .sobre-nosotros .sobre-nosotros-info h1 {
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+    color: var(--texto-color);
+    font-size: 2.3vw;
+    font-weight: 600;
+}
+
+/* Estilo para el h1 y el parrafo */
+.main .sobre-nosotros .sobre-nosotros-info {
+    width: 45%;
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+    color: var(--texto-color);
+    font-size: 1em;
+    font-weight: 600;
+}  
+
+/* -------------------Estilo para el link (+info) boton rojo-----------------------------------------------*/
+.main .sobre-nosotros .sobre-nosotros-info a {
+    color: var(--texto-color);
+    text-decoration: none;
+    text-align: left;
+}
+
+.main .sobre-nosotros .sobre-nosotros-info .button-rojo {
+    color: var(--link-color);
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    max-width: 120px;
+    width: 100%;
+    letter-spacing: 0.1rem;
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    transition: all 1s ease-in;
+
+} 
+
+.main .sobre-nosotros .sobre-nosotros-info .button-rojo span {
+    color: var(--link-color);
+}
+
+.main .sobre-nosotros .sobre-nosotros-info .button-rojo:hover {
+    color: var(--texto-color);
+}
+
+.main .sobre-nosotros .sobre-nosotros-info .button-rojo svg {
+    height: 40px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+} 
+
+.main .sobre-nosotros .sobre-nosotros-info .button-rojo rect {
+    fill: none;
+    stroke: var(--bordes-color);
+    stroke-width: 3;
+    stroke-dasharray: 450, 0;
+    transition: all 0.5s linear;
+}
+
+.main .sobre-nosotros .sobre-nosotros-info .button-rojo:hover rect {
+    stroke-width: 3;
+    stroke-dasharray: 20, 300;
+    stroke-dashoffset: 30;
+    stroke: var(--bordes-color);
+    transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
+} 
+/* -----------------fin estilos del boton link (rojo)------------------------------------------ */
+
+
+
+/* -------------------Puntos de corte para la seccin (Acerca de Nosotros)----------------------------- */
+
+/* Tamaño Para pc y dispositivos entre 768 y 1200px */
+@media only screen and (min-width: 220px) and (max-width: 1200px)  {
+    .main .sobre-nosotros {
+        margin: 0px;
+        grid-template-columns: auto auto;
+        display: grid;
+
+    }
+
+    .main .sobre-nosotros .sobre-nosotros-info {
+        width: auto;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .main .sobre-nosotros .sobre-nosotros-img img {
+        margin: 0px;
+        width: 90%;
+        height: 90%;
+        padding: 0px;
+    }
+
+    .main .sobre-nosotros .sobre-nosotros-info h1 {
+        font-size: 20px;
+    }
 
 }
