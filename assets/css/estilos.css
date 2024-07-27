@@ -813,28 +813,28 @@ header label {
     }   */
 
     .main .sobre-nosotros {
-        margin: 0px;
+        /* margin: 0px; */
         display: flex; 
-        flex-direction: column;*/
+        flex-direction: column;
         /* justify-content:center;
         align-items:center; 
-        align-content:center; */
-
+       align-content:center;  */
+        padding: 10px 0px 10px 80px;  
     } 
 
     .main .sobre-nosotros .sobre-nosotros-info {
         width: auto;
-        margin: 10px;
-        padding: 10px 30px 10px 40px; 
+        /* margin: 10px; */
+        padding: 10px 80px 10px 0px; 
     }
 
     .main .sobre-nosotros .sobre-nosotros-img img{
-        margin: 0px;     
+        margin: 0px;      
         /* width: 50%;*/
         height: 75%;        
         width: 80%; 
         /* height: 50vh;  */
-        padding: 0px;   
+        padding: 0px;    
     }
 
     .main .sobre-nosotros .sobre-nosotros-info h1 {
