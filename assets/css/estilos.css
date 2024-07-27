@@ -22,7 +22,6 @@
 
 /* Contenido */
 body {
-    /* padding: 30px;  */
     font-family: "Helvetica Neue", helvetica, arial; 
     background-color: #000000;
 }
@@ -120,8 +119,7 @@ a {
 
 /* ancho, color de fondo, y posicion del header) */
 .header { 
-/* Ancho, color de fondo del header */
-width: 100%; 
+ 
 /* background-color:rgba(255,255,255,.8);
 box-shadow:0 0 .25em rgba(0,0,0,.25); */
 background-color: var(--header-color);  
@@ -133,6 +131,8 @@ top: 0;
 right:0;
 
 display: flex;
+/* Ancho, color de fondo del header */
+width: 100%;
 /* Centro verticalmente logo y links */
 align-items: center;
 /* Separo de extremo a extremo horizontalmente  */
@@ -446,6 +446,7 @@ header label {
     .logo .logo2 {
         display: flex;
         align-items: center;
+       
     }
     
     /* Tamaño y Distancia del logo principal con respecto a la parte inferior del header*/
@@ -515,6 +516,10 @@ header label {
 
 /* ------------------Comienzo de estilos del main--------------------------------- */
 
+.main {
+    display:grid;
+    width:100%;
+}
 /* -------------------Comienzo de la seccion del Eslider------------------------ */
 
 .slider-frame {
@@ -661,7 +666,7 @@ header label {
 
 
 
-/* ---------------------Comienzo seccion sobre nosotors---------------------------------- */
+/* ---------------------Comienzo seccion sobre acerca de nosotros---------------------------------- */
 
 .main .sobre-nosotros {
         display: flex;
@@ -685,11 +690,6 @@ header label {
     margin-left: 30px;  
 }
 
-/* .main .sobre-nosotros .sobre-nosotros-info {
-    text-align: left;
-    width: 45%;
-    color: var(--texto-color);
-} */
 
 /* Estilos para "Acerca de Nosotros" */
 .main .sobre-nosotros .sobre-nosotros-info .nosotros {
@@ -699,7 +699,7 @@ header label {
 
 /* Estilo para el h1 */
 .main .sobre-nosotros .sobre-nosotros-info h1 {
-    text-align: center;
+    text-align: left;
     margin: 0px 0px 5px 0px;
     color: var(--texto-color);
     font-size: 2.3vw;
@@ -709,7 +709,7 @@ header label {
 /* Estilo para el h1 y el parrafo */
 .main .sobre-nosotros .sobre-nosotros-info {
     width: 45%;
-    text-align: center;
+    text-align: left;
     margin: 0px 0px 5px 0px;
     color: var(--texto-color);
     font-size: 1em;
@@ -774,10 +774,10 @@ header label {
 
 
 
-/* -------------------Puntos de corte para la seccin (Acerca de Nosotros)----------------------------- */
+/* -------------------Puntos de corte para la seccion (Acerca de Nosotros)----------------------------- */
 
-/* Tamaño Para pc y dispositivos entre 768 y 1200px */
-@media only screen and (min-width: 220px) and (max-width: 1200px)  {
+/* Tamaño Para pc, tablet y dispositivos entre 600 y 1200px */
+@media only screen and (min-width: 600px) and (max-width: 1200px)  {
     .main .sobre-nosotros {
         margin: 0px;
         grid-template-columns: auto auto;
@@ -801,5 +801,44 @@ header label {
     .main .sobre-nosotros .sobre-nosotros-info h1 {
         font-size: 20px;
     }
-
 }
+
+
+
+/* Tamño para celulares */
+@media only screen and (max-width: 599px)  {
+     /* .main .sobre-nosotros {
+        margin: 0px; 
+        grid-template-columns: auto;
+        display: grid;
+
+    }  */
+
+    .main .sobre-nosotros {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+
+    } 
+
+    .main .sobre-nosotros .sobre-nosotros-info {
+        width: auto;
+        margin: 10px;
+        padding: 10px 40px 10px 40px; 
+    }
+
+    .main .sobre-nosotros .sobre-nosotros-img img{
+        margin: 0px;  
+        /* width: 50%;*/
+        height: 100%;     */
+        width: 100%;
+        /* height: 50vh;  */
+        padding: 0px; 
+    }
+
+    .main .sobre-nosotros .sobre-nosotros-info h1 {
+        font-size: 20px;
+    } 
+}
+
+/* ------------Fin punto de cote (acerca de nosotros)---------------- */
