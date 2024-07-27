@@ -777,7 +777,7 @@ header label {
 /* -------------------Puntos de corte para la seccion (Acerca de Nosotros)----------------------------- */
 
 /* Tamaño Para pc, tablet y dispositivos entre 600 y 1200px */
-@media only screen and (min-width: 600px) and (max-width: 1200px)  {
+@media only screen and (min-width: 100px) and (max-width: 1200px)  {
     .main .sobre-nosotros {
         margin: 0px;
         grid-template-columns: auto auto;
@@ -805,43 +805,6 @@ header label {
 
 
 
-/* Tamño para celulares */
-@media only screen and (max-width: 599px)  {
-     /* .main .sobre-nosotros {
-        margin: 0px; 
-        grid-template-columns: auto;
-        display: grid;
 
-    }  */
-
-    .main .sobre-nosotros {
-        margin: 0px;
-        display: flex; 
-        flex-direction: column;
-        /* justify-content:center;
-        align-items:center; 
-        align-content:center; */
-
-    } 
-
-    .main .sobre-nosotros .sobre-nosotros-info {
-        width: auto;
-        margin: 10px;
-        padding: 10px 40px 10px 40px; 
-    }
-
-    .main .sobre-nosotros .sobre-nosotros-img img{
-        margin: 0px 50px;     
-        /* width: 50%;*/
-        height: 80%;       
-        width: 80%; 
-        /* height: 50vh;  */
-        padding: 0px 0px;   
-    }
-
-    .main .sobre-nosotros .sobre-nosotros-info h1 {
-        font-size: 20px;
-    } 
-}
 
 /* ------------Fin punto de cote (acerca de nosotros)---------------- */
