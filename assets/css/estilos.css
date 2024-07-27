@@ -516,10 +516,10 @@ header label {
 
 /* ------------------Comienzo de estilos del main--------------------------------- */
 
-.main {
+/* .main {
     display:grid;
     width:100%;
-}
+} */
 /* -------------------Comienzo de la seccion del Eslider------------------------ */
 
 .slider-frame {
