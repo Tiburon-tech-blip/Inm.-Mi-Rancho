@@ -816,26 +816,26 @@ header label {
         /* margin: 0px; */
         display: flex; 
         flex-direction: column;
-        /* justify-content:center;
-        align-items:center; 
-       align-content:center;  */
-        padding: 10px 0px 10px 80px;  
+        justify-content:center;
+        /* align-items:center;  */
+     /*  align-content:center;  */
+        /* padding: 10px 0px 10px 50px;    */
     } 
 
     .main .sobre-nosotros .sobre-nosotros-info {
         width: auto;
-        /* margin: 10px; */
-        padding: 10px 80px 10px 0px; 
+        padding: 10px 20px 10px 20px;  
     }
 
     .main .sobre-nosotros .sobre-nosotros-img img{
-        margin: 0px;      
-        /* width: 50%;*/
-        height: 75%;        
-        width: 80%; 
-        /* height: 50vh;  */
-        padding: 0px;    
-    }
+        margin: 0px;
+        padding: 0px;           
+        height: 10%;         
+        width: 100%;  
+     
+       
+        
+    }  
 
     .main .sobre-nosotros .sobre-nosotros-info h1 {
         font-size: 20px;
