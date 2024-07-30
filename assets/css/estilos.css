@@ -13,9 +13,11 @@
 
 /* Selector universal */
 * {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid blue; */
     /* Escrive en mayuscula el primer caracter de las palabra */
     /* text-transform: capitalize;  */
 } 
@@ -518,10 +520,7 @@ header label {
 
 /* ------------------Comienzo de estilos del main--------------------------------- */
 
-/* .main {
-    display:grid;
-    width:100%;
-}  */
+
 /* -------------------Comienzo de la seccion del Eslider------------------------ */
 
 .slider-frame {
@@ -676,7 +675,7 @@ header label {
         align-items: center;
         justify-content: center;
         /*height: 450px;*/
-        padding: 15px 0px 10px 0px;
+        padding: 15px 0px 15px 0px;
         width: 100%;
         background: var(--color-fondo-background-2);
         text-shadow: -1px 3px 4px rgba(0, 0, 0, 0.29);
@@ -690,8 +689,9 @@ header label {
 .main .sobre-nosotros .sobre-nosotros-img img {
     border: 3px solid var(--bordes-color);
     box-shadow: 0px 0px 0px 1px  var(--bordes-color2);
-    margin-right: 30px;
-    margin-left: 30px;  
+    /* margin-right: 30px; */
+   /*padding-left: 30px; */
+    /* margin-left: 30px;    */
 }
 
 
@@ -718,6 +718,7 @@ header label {
     color: var(--texto-color);
     font-size: 1rem;
     font-weight: 600;
+    padding: 10px 20px 10px 40px;
 }  
 
 /* -------------------Estilo para el link (+info) boton rojo-----------------------------------------------*/
@@ -775,6 +776,7 @@ header label {
     transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
 } 
 /* -----------------fin estilos del boton link (rojo)------------------------------------------ */
+
 
 .main .color-fondo {
     background:var(--color-fondo-background-1);
@@ -838,9 +840,10 @@ header label {
 /* Tamaño Para pc, tablet y dispositivos entre 600 y 1200px */
 @media only screen and (min-width: 600px) and (max-width: 1200px)  {
     .main .sobre-nosotros {
-        margin: 0px;
+        /* margin: 50px; */
         grid-template-columns: auto auto;
         display: grid;
+        padding: 30px 30px 30px 50px;
 
     }
 
@@ -851,7 +854,7 @@ header label {
     }
 
     .main .sobre-nosotros .sobre-nosotros-img img {
-        margin: 15px;
+        /* margin: 15px;  */
         width: 90%;
         height: 90%;
         padding: 0px;
@@ -863,23 +866,18 @@ header label {
 }
 
 /* Tamño para celulares */
-@media only screen and (max-width: 599px)  {
-    /* .main .sobre-nosotros {
-        margin: 0px; 
-        grid-template-columns: auto;
-        display: grid;
-
-    }   */
+ @media only screen and (max-width: 599px)  {
+    
 
     .main .sobre-nosotros {
-        /* margin: 0px; */
+        
         display: flex; 
         flex-direction: column;
         justify-content:center;
-    } 
+    }  
 
     .main .sobre-nosotros2 {
-        /* margin: 0px; */
+        /* margin: 0px;  */
         display: flex; 
         flex-direction: column-reverse;
         justify-content:center;
@@ -906,3 +904,42 @@ header label {
 
 /* ------------Fin Seccion (acerca de nosotros)------------------------ */
 
+.columnas {
+    display: grid;
+    width:100%;
+    grid-template-columns: auto auto;
+} 
+
+/* .margen-isquierdo {
+    padding-left: 30px; 
+}   */
+
+@media only screen and (min-width: 600px) and (max-width: 1200px)  {
+    .main .columnas .css-grid {
+       
+        display: grid;
+        grid-template-columns: auto;
+        width:100%;  
+       
+    }
+}
+
+.main .columnas .css-grid .sobre-nosotros-img {
+    
+    width:100%;
+    
+}  
+
+@media only screen and (max-width: 599px)  {
+    .columnas {
+        display: flex;
+        width:100%;  
+        flex-direction: column;
+       
+    }  
+    .main .columnas .css-grid .sobre-nosotros-img {
+    
+        width:80%;  
+       
+    } 
+}
