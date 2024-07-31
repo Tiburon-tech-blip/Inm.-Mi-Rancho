@@ -144,7 +144,8 @@ z-index:9999;
 padding-left: 45px;
 padding-right: 45px;
 /* Borde inferior del header*/
-border-bottom: 3px solid var(--bordes-color); 
+border-bottom: 1px solid var(--bordes-color); 
+box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932)
 } 
 
 /* Distancia superior del logo */
@@ -531,7 +532,8 @@ header label {
     /*Ocultamos el desbordamiento  */
 	overflow: hidden;
     /* Estilo del borde inferior del slider */
-    border-bottom: 3px solid orange; 
+    border-bottom: 2px solid orange; 
+    box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932)
 }
 
 /* Colocamos las imagenes en linea con flex con un ancho del 400% por ser 4 imagenes */
@@ -683,12 +685,13 @@ header label {
         /* -webkit-box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
         -moz-box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1); */
         /* Borde inferior de la seccion (acerca de nostros) */
-        border-bottom: 3px solid var(--bordes-color);
+        border-bottom: 2px solid var(--bordes-color); 
+        box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932);
 } 
 
 .main .sobre-nosotros .sobre-nosotros-img img {
     border: 3px solid var(--bordes-color);
-    box-shadow: 0px 0px 0px 1px  var(--bordes-color2);
+    box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932);
     width: 350px;
     height: 233px;
     /* margin-right: 30px; */
@@ -760,6 +763,7 @@ header label {
     top: 0;
     position: absolute;
     width: 100%;
+    box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932)
 } 
 
 .main .sobre-nosotros .sobre-nosotros-info .button-rojo rect {
@@ -811,6 +815,7 @@ header label {
     top: 0;
     position: absolute;
     width: 100%;
+    box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932)
 }
 
 .main .sobre-nosotros .sobre-nosotros-info .button-negro rect {
