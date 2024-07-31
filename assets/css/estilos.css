@@ -689,7 +689,7 @@ header label {
 .main .sobre-nosotros .sobre-nosotros-img img {
     border: 3px solid var(--bordes-color);
     box-shadow: 0px 0px 0px 1px  var(--bordes-color2);
-    width: 348px;
+    width: 350px;
     height: 233px;
     /* margin-right: 30px; */
    /*padding-left: 30px; */
@@ -895,7 +895,7 @@ header label {
         margin: 0px;
         padding: 0px;           
         height: 80%;          
-        width: 80%;        
+        width: 90%;        
     }  
 
     .main .sobre-nosotros .sobre-nosotros-info h1 {
