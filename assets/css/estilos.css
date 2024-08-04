@@ -1,11 +1,11 @@
-
 :root {
     --color-fondo-background-1: #000000;
     --color-fondo-background-2: #8b0000;
     --header-color: #8b0000;
     --menu-color: #A52A2A;
     --texto-color: #ffffff;
-    --bordes-color: orange; --bordes-color2: yellow;
+    --bordes-color: orange;
+    --bordes-color2: rgba(228, 151, 7, 0.932);
     --link-color: orange;
 
 
@@ -13,18 +13,17 @@
 
 /* Selector universal */
 * {
-    
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* border: 1px solid blue; */
-    /* Escrive en mayuscula el primer caracter de las palabra */
-    /* text-transform: capitalize;  */
-} 
+
+}
 
 /* Contenido */
 body {
-    font-family: "Helvetica Neue", helvetica, arial; 
+    font-family: "Helvetica Neue", helvetica, arial;
     background-color: #000000;
 }
 
@@ -38,10 +37,10 @@ a {
 * {
     scrollbar-width: auto;
     scrollbar-color: var(--header-color) #ffffff;
-} 
+}
 
 /* Chrome, Edge, and Safari */
- *::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 16px;
 }
 
@@ -53,7 +52,7 @@ a {
     background-color: var(--header-color);
     border-radius: 10px;
     border: 3px solid #ffffff
-} 
+}
 
 
 /* ---------------------------------------------------------------------------- */
@@ -85,199 +84,213 @@ a {
 
 /* ------------------Cominzo: Background: Fondo animado----------------------- */
 .bg {
-    animation:slide 3s ease-in-out infinite alternate;
+    animation: slide 3s ease-in-out infinite alternate;
     /* background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%); */
     background-image: linear-gradient(-60deg, #000000 50%, #f80000 50%);
-    bottom:0;
-    left:-50%;
-    opacity:.5;
-    position:fixed;
-    right:-50%;
-    top:0;
-    z-index:-1;
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
 }
-  
+
 .bg2 {
-    animation-direction:alternate-reverse;
-    animation-duration:4s;
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
 }
-  
+
 .bg3 {
-    animation-duration:5s;
+    animation-duration: 5s;
 }
 
 @keyframes slide {
     0% {
-      transform:translateX(-25%);
+        transform: translateX(-25%);
     }
+
     100% {
-      transform:translateX(25%);
+        transform: translateX(25%);
     }
 }
+
 /* ---------------------Fin Backgrond: Fondo animado----------------------- */
 
 
-/* ---------------------Estilos del menu header---------------------------- */
+/* 1)---------------------Estilos del menu header---------------------------- */
 
 /* ancho, color de fondo, y posicion del header) */
-.header { 
- 
-/* background-color:rgba(255,255,255,.8);
+.header {
+    /* background-color:rgba(255,255,255,.8);
 box-shadow:0 0 .25em rgba(0,0,0,.25); */
-background-color: var(--header-color);  
-/* Posicion del header */
-/* position:fixed; */
-position:sticky;
-left: 0;
-top: 0; 
-right:0;
+    background-color: var(--header-color);
+    /* Posicion del header */
+    position: sticky;
+    left: 0;
+    top: 0;
+    right: 0;
 
-display: flex;
-/* Ancho, color de fondo del header */
-width: 100%;
-/* Centro verticalmente logo y links */
-align-items: center;
-/* Separo de extremo a extremo horizontalmente  */
-justify-content: space-between;
-z-index:9999;
-/* Doy margenes internos isquierdo y derecho de 40px para el menu completo */
-padding-left: 45px;
-padding-right: 45px;
-/* Borde inferior del header*/
-border-bottom: 1px solid var(--bordes-color); 
-box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932)
-} 
+    display: flex;
+    /* Espacio ocupado por el Ancho del header*/
+    width: 100%;
+    /* Centro verticalmente logo y links */
+    align-items: center;
+    /* Separo de extremo a extremo horizontalmente  */
+    justify-content: space-between;
+    z-index: 9999;
+    /* Doy margenes internos isquierdo y derecho de 40px para el menu completo */
+    padding-left: 45px;
+    padding-right: 45px;
+    /* Borde inferior del header*/
+    border-bottom: 1px solid var(--bordes-color);
+    box-shadow: 2px 2px 8px var(--bordes-color2);
+}
 
 /* Distancia superior del logo */
 .header .logo {
-    padding-top: 15px ;
+    padding-top: 15px;
 }
 
+/* margen entre el logo y el titulo del logo */
 .name {
     padding-left: 20px;
 }
 
-/* Estios para el titulo del logo */
+/* 1-b)--------------------Estios para el titulo del logo------------------------------------ */
 
-/* Estilos para el titulo del logo, tamaño de fuente, familia y peso, y margen interno inferior */
+/* Estilos para el titulo del logo, tamaño de fuente, familia y peso*/
 .fire a {
     font-size: 55px;
-    padding-bottom: 15px;
+    /* padding-bottom: 40px; */
     font-family: "Akronim", system-ui;
     font-weight: 600;
 }
 
-/* Color cunado hago foco en el titulo del logo */
+/* Color cunado hago foco en el titulo del logo principal*/
 .fire a:hover {
-    color: #A52A2A;
-} 
+    color: var(--header-color);
+}
 
-
+/* Color, sombra y animacion del titulo del logo principal */
 .fire .Blazing {
-    /* color: rgb(255, 115, 0); */
-    color: var(--texto-color); 
-	text-shadow:
+    color: var(--texto-color);
+    text-shadow:
         0 3px 20px red,
         0 0 20px red,
-		0 0 10px orange,
-		4px -5px 6px yellow,
-		-4px -10px 10px yellow,
-		0 -10px 30px yellow;
-	animation: 2s Blazing infinite alternate linear;
+        0 0 10px orange,
+        4px -5px 6px yellow,
+        -4px -10px 10px yellow,
+        0 -10px 30px yellow;
+    animation: 2s Blazing infinite alternate linear;
 }
 
 @keyframes Blazing {
-	0%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-		0 0 10px orange,
-		0 0 0 yellow,
-		0 0 5px yellow,
-		-2px -5px 5px yellow,
-		4px -10px 10px yellow; }
-	25%   { text-shadow: 0 3px 20px red, 0 0 30px red,
-		0 0 20px orange,
-		0 0 5px yellow,
-		-2px -5px 5px yellow,
-		3px -10px 10px yellow,
-		-4px -15px 20px yellow; }
-	50%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-		0 -5px 10px orange,
-		-2px -5px 5px yellow,
-		3px -10px 10px yellow,
-		-4px -15px 20px yellow,
-		2px -20px 30px rgba(255,255,0,0.5); }
-	75%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-		0 -5px 10px orange,
-		3px -5px 5px yellow,
-		-4px -10px 10px yellow,
-		2px -20px 30px rgba(255,255,0,0.5),
-		0px -25px 40px rgba(255,255,0,0)}
-	100%   { text-shadow: 0 3px 20px red, 0 0 20px red,
-		0 0 10px orange,
-		0 0 0 yellow,
-		0 0 5px yellow,
-		-2px -5px 5px yellow,
-		4px -10px 10px yellow; }
+    0% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 0 10px orange,
+            0 0 0 yellow,
+            0 0 5px yellow,
+            -2px -5px 5px yellow,
+            4px -10px 10px yellow;
+    }
+
+    25% {
+        text-shadow: 0 3px 20px red, 0 0 30px red,
+            0 0 20px orange,
+            0 0 5px yellow,
+            -2px -5px 5px yellow,
+            3px -10px 10px yellow,
+            -4px -15px 20px yellow;
+    }
+
+    50% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 -5px 10px orange,
+            -2px -5px 5px yellow,
+            3px -10px 10px yellow,
+            -4px -15px 20px yellow,
+            2px -20px 30px rgba(255, 255, 0, 0.5);
+    }
+
+    75% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 -5px 10px orange,
+            3px -5px 5px yellow,
+            -4px -10px 10px yellow,
+            2px -20px 30px rgba(255, 255, 0, 0.5),
+            0px -25px 40px rgba(255, 255, 0, 0)
+    }
+
+    100% {
+        text-shadow: 0 3px 20px red, 0 0 20px red,
+            0 0 10px orange,
+            0 0 0 yellow,
+            0 0 5px yellow,
+            -2px -5px 5px yellow,
+            4px -10px 10px yellow;
+    }
 }
-/* ----------------Fin estios Titulo del logo---------------------------------------------------- */
+
+/* Fin 1-b)----------------Fin estios Titulo del logo---------------------------------------------------- */
 
 
 
-/* Centro Verticalmente los links*/
+/* Centro Verticalmente los links (logo, tiutlo del logo y links*/
 .header .navbar {
-     display:flex;
-     position: relative;  
-     float: left; 
-} 
+    display: flex;
+    position: relative;
+    float: left;
+}
 
 
-.header .navbar .menu {  
+.header .navbar .menu {
     border-radius: 20px;
     /* Distancia de los extremos isquierdo y derecho del menu principal "Bordes derecho y isquierdo"*/
     padding: 0px 30px;
     /* sombra de los bordes del menu */
-    box-shadow: inset 0 10px 10px rgba(210,105,30,.5), inset 0 -2px 0 rgba(228, 151, 7, 0.932), 0 1px 3px rgba(228, 151, 7, 0.932); 
-    /* Color de fondo del menu */
-    background-color: var(--menu-color); 
+    box-shadow: inset 0 10px 10px rgba(210, 105, 30, .5), inset 0 -2px 0 rgba(228, 151, 7, 0.932), 0 1px 3px rgba(228, 151, 7, 0.932);
+    /* Color de fondo del menu principal*/
+    background-color: var(--menu-color);
 
 }
- 
 
-/* Alineo los links del menu y quito viñetas de las opciones principales*/
+
+/* Alineo los links del menu principal*/
 .header .navbar .menu li {
-    /* display: flex;*/
-    position: relative;     
-    float: left; 
-       
-}  
+    position: relative;
+    float: left;
+
+}
 
 
-.header .navbar .menu > li {
-     /* Estilo para los bordes verticales derechos de las opciones principales */
-     border-right: 3px solid rgb(228, 151, 7, 0.932);
-    /* Perpectiva para el giro de las opciones del menu */
-    perspective: 1000px;     
-} 
+.header .navbar .menu>li {
+    /* Estilo para los bordes verticales derechos de las opciones principales */
+    border-right: 3px solid var(--bordes-color2);
+    /* Perpectiva para el giro de las opciones del menu osilante */
+    perspective: 1000px;
+}
 
 /* Estilo del primer borde vertical isquierdo de las opciones principales */
-.menu > li:first-child {
+.menu>li:first-child {
     /* Estilo del primer borde de la isquierda del menu */
-     border-left: 3px solid rgba(228, 151, 7, 0.932); 
-     /* box-shadow: -3px 0 0 rgba(228, 151, 7, 0.932), 1px 0 0 rgba(255,255,255,.25);*/
- } 
+    border-left: 3px solid var(--bordes-color2);
+    /* box-shadow: -3px 0 0 rgba(228, 151, 7, 0.932), 1px 0 0 rgba(255,255,255,.25);*/
+}
 
-/* Quito las viñetas a los links */
+/* Quito las viñetas a los links de las opciones principales*/
 .header .navbar ul {
     list-style: none;
 }
 
 /* Estilo de la Fuente y pongo en bloque las opciones principales del menu*/
 .header .navbar .menu li a {
-    
+
     font-size: 20px;
-    /* Marjenes internos de los titulos de las opciones principales */
+    /* Marjenes internos entre opciones principales */
     padding: 13px 20px 13px 20px;
     /*Color de la funete de las opciones principales  */
-    color: rgba(228, 151, 7, 0.932); 
+    color: var(--bordes-color2);
     /* Interlineado, peso y tamaño de la fuente y espacio entre letras de las opciones principales*/
     line-height: 1;
     font-weight: 600;
@@ -285,50 +298,52 @@ box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932)
     letter-spacing: -.02em;
     background: transparent;
     /*Efecto de sombreado de las opciones principales  */
-    text-shadow: 0 1.5px 1.5px rgba(255, 255, 0, 0.9); 
-    transition: all .25s ease-in-out;  
+    /* text-shadow: 0 1.5px 1.5px var(--bordes-color2);  */
+    transition: all .25s ease-in-out;
     display: block;
 }
 
 
 /* Efecto de fondo y texto cuando hago foco en las opciones principales del menu */
-.header .navbar .menu > li:hover > a {  
+.header .navbar .menu>li:hover>a {
     /* Color del fondo del texto */
     background: #000000;
     /* Color de texto cuando hacemos foco */
     color: var(--texto-color);
-    text-shadow: none; 
+    text-shadow: none;
 }
 
 /* Posicion (para que las opciones principales esten en linea), ancho, color y visibilidad nula del menu desplegable */
-header .navbar .menu li ul {   
+header .navbar .menu li ul {
     position: absolute;
-    width: 100%; 
-    left:0 ;
+    width: 100%;
+    left: 0;
+    /* Ancho del menu osilante */
     width: 200px;
     /* Tamaño de los bordes inferiores del menu desplagable*/
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background: transparent;
-    transform-origin: 50% 0%; 
+    transform-origin: 50% 0%;
     overflow: hidden;
     display: none;
-} 
+}
 
 /* Restablezco el valor a visible del menu desplegable */
-header .navbar .menu li:focus-within > ul, header .navbar .menu li:hover >ul {
+header .navbar .menu li:focus-within>ul,
+header .navbar .menu li:hover>ul {
     display: initial;
-    /*Distancia arriba y abajo de las primera y ultima opcion secundaria */
+    /*Distancia arriba y abajo de las primera y ultima opcion secundaria del menu osilante */
     padding: 15px 0;
     background: #000000;
-    
+
     /* Sombra del borde del menu osilante */
-    box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932);
+    box-shadow: 2px 2px 8px var(--bordes-color2);
     /* Nombre de la animacion, duracion y funcion */
     animation-name: swingdown;
     animation-duration: 1s;
     animation-timing-function: ease;
-   
+
 }
 
 /* Fotogramas de la animacion */
@@ -338,7 +353,7 @@ header .navbar .menu li:focus-within > ul, header .navbar .menu li:hover >ul {
         transform: rotateX(90deg);
     }
 
-    30% {			
+    30% {
         transform: rotateX(-20deg) rotateY(5deg);
         animation-timing-function: ease-in-out;
     }
@@ -356,11 +371,11 @@ header .navbar .menu li:focus-within > ul, header .navbar .menu li:hover >ul {
 
 /* Fuente y borde de el interior del menu osilante */
 .header .navbar .menu ul li a {
-    /* marjen isquierdo de las opciones secundarias */
+    /* marjen isquierdo de las opciones secundarias del menu osilante */
     padding-left: 15px;
     /* Espesor y color de fuente del menu osilante */
     font-weight: 400;
-    color: #FFC300;
+    color: var(--bordes-color);
     text-shadow: none;
     /* Tipo de Borde abajo y arriba */
     /* border-top: dotted 5px transparent;
@@ -368,15 +383,15 @@ header .navbar .menu li:focus-within > ul, header .navbar .menu li:hover >ul {
     transition: all .15s linear; */
 }
 
-/* Color de funte, cuando hacemos foco en el interior (opciones) del menu osilante */
+/* Color de funte, cuando hacemos foco en el interior (opciones secundarias) del menu osilante */
 .header .navbar .menu ul li a:hover {
     position: relative;
     width: 100%;
     color: var(--texto-color);
-      
+
 }
 
-/* ocultamos el checkbox */
+/* ocultamos el checkbox del menu anburguesa*/
 #menu-bar {
     display: none;
 }
@@ -384,186 +399,194 @@ header .navbar .menu li:focus-within > ul, header .navbar .menu li:hover >ul {
 /* Ocultamos icono de menu amburgueza y le ponemos color, tamaño y cursor */
 header label {
     font-size: 38px;
-    color: #ffffff;
+    color: var(--texto-color);
     cursor: pointer;
     display: none;
 }
 
 
-/* -------------------Puntos de corte para el header----------------------------- */
+/* 1-c)-------------------Puntos de corte para el header----------------------------- */
 
 /* Tamaño Para pc y dispositivos entre 768 y 1200px */
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
     .header {
-       
-         /*Pongo el logo principal y los links del menu en columna y centrado y con una disposicion vertical*/
-        display: flex; 
+        /*Pongo el logo principal y el titulo junto con los links del menu principal en columna y centrado y con una disposicion vertical*/
+        display: flex;
         flex-direction: column;
-        justify-content: flex-start; 
+        justify-content: flex-start;
         align-content: center;
+        /* Color del header */
         background-color: var(--header-color);
         /* height: 155px; */
         /* Tamño de fuente de las opciones principales del menu */
-        font-size: 12px;  
+        font-size: 12px;
         /*Distancia de los extremos derecho y isquierdo y abajo del menu con respecto al los boedes del header*/
         padding: 0px 5px 10px 5px;
-      
     }
 }
-/* --------Fin dispositivo pc-------------------------------------- */
+
+/* ---------------------------Fin dispositivo pc-------------------------------------- */
 
 /* -------------------Tamaño Tablet------------------------------- */
- @media only screen and (min-width: 600px) and (max-width: 768px) {
-    .header { 
-        /*Pongo el logo principal y los links del menu en columna y centrado y con una disposicion vertical*/
-        display: flex; 
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .header {
+        /*Pongo el logo principal y el titulo junto con los links del menu principal en columna y centrado y con una disposicion vertical*/
+        display: flex;
         flex-direction: column;
-        justify-content: flex-start; 
+        justify-content: flex-start;
         align-content: center;
+        /* Color del header */
         background-color: var(--header-color);
         /* height: 150px;     */
-        font-size: 10px; 
+        /* Tamño de fuente de las opciones principales del menu */
+        font-size: 10px;
         /*Distancia de los extremos derecho y isquierdo y abajo del menu con respecto al los boedes del header*/
         padding: 0px 5px 10px 5px;
     }
 
     /* Ancho del menu osilante */
-    .header .navbar .menu li ul {   
+    .header .navbar .menu li ul {
         width: 160px;
-     } 
-  
-    /* Marjenes internos de las opciones principales */
+    }
+
+    /* Marjenes internos entre las opciones principales */
     .header .navbar .menu li a {
-    padding: 13px 13px 13px 13px;     
-    }    
+        padding: 13px 13px 13px 13px;
+    }
 }
+
 /* -----------------Fin dispositivo  Tablet ----------------*/
 
 /* --------------Tamaño Celular hasta 600px -------------------------*/
 @media only screen and (max-width:600px) {
- 
+
     /* Distancia del extremo derecho del menu amburgueza y altura del header*/
     .header {
-        padding: 0px 15px 0px 15px;  
-        height: 60px; 
+        padding: 0px 15px 0px 15px;
+        height: 60px;
     }
 
+    /*Centro el titulo del logo verticalmante  */
     .logo .logo2 {
         display: flex;
         align-items: center;
-       
+
     }
-    
-    /* Tamaño y Distancia del logo principal con respecto a la parte inferior del header*/
+
+    /* Tamaño del logo principal y distancia con respecto a la parte inferior del header*/
     .header .logo .logo2 img {
         margin-bottom: 5px;
         height: 35px;
         width: 35px;
-    } 
-    
+    }
+
     /* Estilo para el titulo del logo principal */
     .header .logo .logo2 .name {
         text-align: center;
         font-size: 35px;
         padding-left: 10px;
-        /* display: none; */
     }
 
-    /* Estilo de los hijos directos, bordes de las opciones principales */
-    .header .navbar .menu > li {
+    /* Estilo de bordes de las opciones principales */
+    .header .navbar .menu>li {
         /* Estilo de los bordes isquierdos de las opciones principales */
-        border-left: 3px solid rgb(228, 151, 7, 0.932);
-            
-    } 
-    
-    /* Visibilizamos el logo del menu Amburgueza*/
+        border-left: 3px solid var(--bordes-color2);
+
+    }
+
+    /* Pongo de forma Visible el logo del menu Amburgueza*/
     .header label {
         display: initial;
     }
 
     .header .navbar {
         position: absolute;
-        top: 100%; left: 0; right: 0;
+        top: 100%;
+        left: 0;
+        right: 0;
         background-color: var(--header-color);
         /* ocultamos el menu desplagable */
         display: none;
-    } 
+    }
 
-      /* Ponemos de forma vertical las opciones principales */
+    /* Ponemos de forma vertical las opciones principales del menu */
     .header .navbar .menu li {
-        width: 100%; 
+        width: 100%;
 
-    } 
+    }
 
-    
+
     /* Apilamos la opciones en forma vertical */
     .header .navbar .menu li ul {
         position: relative;
         width: 100%;
     }
-    
-      /* Color de Fondo de las opciones secundarias */
+
+    /* Color de Fondo de las opciones secundarias */
     .header .navbar .menu li ul li {
-        background: #333; 
+        background: #333;
     }
 
     /* Visibilizamos el menu cuando hacemos clik en el logo "Menu anburgueza" */
-    #menu-bar:checked ~ .navbar {
-        display:initial;
+    #menu-bar:checked~.navbar {
+        display: initial;
     }
 }
+
 /* ----------------------------Fin dispositivo celular--------------------------*/
-/* --------------------------Fin de lo puntos de corte-------------------------- */
+/* Fin 1-c)--------------------------Fin de lo puntos de corte-------------------------- */
 
-/* ---------------------Cierre del Menu o header-------------------------------- */
-
-
-
-/* ------------------Comienzo de estilos del main--------------------------------- */
+/* Fin 1-a)---------------------Cierre del Menu o header-------------------------------- */
 
 
-/* -------------------Comienzo de la seccion del Eslider------------------------ */
+
+
+
+/* 2-a)------------------Comienzo de estilos del main--------------------------------- */
+
+
+/* 2-b)-------------------Comienzo de la seccion del Eslider------------------------ */
 
 .slider-frame {
-	width: 100%; 
-    background-size: cover; 
-    background-position: center; 
+    /* Que ocupe el 100% de la pantalla */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    /*Altura del eslider  */
     height: 100vh;
     /*Ocultamos el desbordamiento  */
-	overflow: hidden;
+    overflow: hidden;
     /* Estilo del borde inferior del slider */
-    border-bottom: 2px solid orange; 
-    box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932)
+    border-bottom: 2px solid var(--bordes-color);
+    box-shadow: 2px 2px 8px var(--bordes-color2);
 }
 
 /* Colocamos las imagenes en linea con flex con un ancho del 400% por ser 4 imagenes */
 .slider-frame ul {
-	display: flex;
+    display: flex;
     padding: 0;
-	width: 400%;
-	animation: slide 20s infinite alternate ease-in-out;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
 }
 
 .slider-frame li {
-	width: 100%;
-	list-style: none;
+    width: 100%;
+    list-style: none;
     position: relative;
 }
 
+/* Estilo para el texto del slider */
 .texto {
-    position: absolute; 
-    /*Alineo los parrafos con repecto al titulo */
+    position: absolute;
+    /*Alineo los h2 (parrafos) con repecto al titulo (h1) */
     text-align: center;
-    /* Le doy altura o posicinamiento superior al titulo y al parrafo */
+    /* Le doy altura o posicinamiento superior al titulo (h1) y al parrafo (h2) */
     top: 200px;
-    /* Alineo en el centro horizontal del slider El tituo con el parrafo */
-    width: 100%; 
-    margin: auto; 
-    /*padding: 0 500px 0px 500px;  */
-
-    /* Color del texto titulo y parrafo */
+    /* Alineo en el centro horizontal del slider El tituo(h1) con el parrafo(h2) */
+    width: 100%;
+    margin: auto;
+    /* Color del texto titulo(h1) y parrafo(h2) del slider */
     color: var(--texto-color);
-     
 }
 
 /* Tamaño del titulo h1 */
@@ -573,34 +596,54 @@ header label {
 
 /* Estilo para el titulo h1 y h2 del slider */
 .fire2 {
-    /* color: rgb(255, 115, 0); */
-    color: var(--texto-color); 
-	text-shadow:
+    color: var(--texto-color);
+    text-shadow:
         0 3px 20px red,
         0 0 20px red,
-		0 0 10px orange,
-		4px -5px 6px yellow,
-		-4px -10px 10px yellow,
-		0 -10px 30px yellow;
+        0 0 10px orange,
+        4px -5px 6px yellow,
+        -4px -10px 10px yellow,
+        0 -10px 30px yellow;
 }
 
+/* Para que la imagen ocupe el 100% de la pantalla */
 .slider-frame img {
-	width: 100%;
-} 
+    width: 100%;
+}
 
 /* Fotogramas correspandientes a la animacion para el slider */
 @keyframes slide {
-	0% {margin-left: 0;}
-	20% {margin-left: 0;}
-	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
-	
-	50% {margin-left: -200%;}
-	70% {margin-left: -200%;}
-	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
 }
 
 
@@ -609,124 +652,132 @@ header label {
 
 /* Tamaño Para pc y dispositivos entre 768 y 1200px */
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
+
     /* Altura y todo el ancho para la imagen */
-   .slider-frame {
-    height: auto;  
-    width: 100%;
+    .slider-frame {
+        height: auto;
+        width: 100%;
     }
 
-    /* Le doy altura o posicinamiento superior al titulo y al parrafo */
+    /* Le doy altura o posicinamiento superior al titulo(h1) y al parrafo(h2) */
     .texto {
-       top:180px;      
+        top: 180px;
     }
 }
 
 /* -------------------Tamaño Tablet------------------------------- */
 @media only screen and (min-width: 600px) and (max-width: 768px) {
+
     /* Altura automatica y todo el ancho para la imagen */
     .slider-frame {
-        height: auto;  
+        height: auto;
         width: 100%;
     }
 
     /* Le doy altura o posicinamiento superior al titulo y al parrafo */
     .texto {
         top: 120px;
-        /* font-size: 3vw; */
-    } 
+    }
 
     /* .texto h2 {
         font-size: 35px;
         margin-bottom: 15px;
     }*/
 
-} 
+}
 
+/* ----------------------------Tamaño celular---------------------------- */
 @media only screen and (max-width:600px) {
+
     /* Altura automatica y todo el ancho para la imagen */
-   .slider-frame {
-        height: auto;  
+    .slider-frame {
+        height: auto;
         width: 100%;
     }
 
-    /* Le doy altura o posicinamiento superior al titulo y al parrafo */
+    /* Le doy altura o posicinamiento superior al titulo(h1) y al parrafo(h2) */
     .texto {
         top: 70px;
-    } 
+    }
 
     /*.texto h1 {
-        font-size: 25px;
-        margin-bottom: 10px;
+        font-size: 25px;     
     }*/
 
     .texto h2 {
         font-size: 15px;
-    } 
+    }
 }
 
-/* ----------------------------Fin seccion slider---------------------------- */
+/* Fin 2-b)----------------------------Fin seccion slider---------------------------- */
 
 
 
 
-/* ---------------------Comienzo seccion sobre acerca de nosotros---------------------------------- */
+
+
+/* 2-c)----------Comienzo seccion sobre (acerca de nosotros; Nuestra Vision, Misuion a cumplir; Nuestro Enfoque)---------------------------------- */
 
 
 .main .sobre-nosotros {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /*height: 450px;*/
-        padding: 15px 0px 15px 0px;
-        width: 100%;
-        background: var(--color-fondo-background-2);
-        text-shadow: -1px 3px 4px rgba(0, 0, 0, 0.29);
-        box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
-        /* -webkit-box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*height: 450px;*/
+    padding: 15px 0px 15px 0px;
+    width: 100%;
+    /* Color de fondo de la secccion roja */
+    background: var(--color-fondo-background-2);
+    text-shadow: -1px 3px 4px rgba(0, 0, 0, 0.29);
+    box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
+    /* -webkit-box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
         -moz-box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1); */
-        /* Borde inferior de la seccion (acerca de nostros) */
-        border-bottom: 2px solid var(--bordes-color); 
-        box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932);
-} 
-
-.main .sobre-nosotros .sobre-nosotros-img img {
-    border: 3px solid var(--bordes-color);
-    box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932);
-    width: 350px;
-    height: 233px;
-    /* margin-right: 30px; */
-   /*padding-left: 30px; */
-    /* margin-left: 30px;    */
+    /* Borde inferior de la secciones mensionadas  */
+    border-bottom: 2px solid var(--bordes-color);
+    box-shadow: 2px 2px 8px var(--bordes-color2);
 }
 
+/* Estilos para las imagenes */
+.main .sobre-nosotros .sobre-nosotros-img img {
+    /* Estilo de borde y sombra para el rectangulo de las imagenes*/
+    border: 3px solid var(--bordes-color);
+    box-shadow: 2px 2px 8px var(--bordes-color2);
+    /* Altura y ancho de las imagenes */
+    width: 350px;
+    height: 233px;
+}
 
-/* Estilos para el texto "Acerca de Nosotros" */
+/* Estilos para los textos de cada seccion */
 .main .sobre-nosotros .sobre-nosotros-info .nosotros {
+    /* Alinado a la isquierda */
     text-align: left;
+    /* tamaño de fuente */
     font-size: 1.2em;
 }
 
-/* Estilo para el h1 */
-.main .sobre-nosotros .sobre-nosotros-info h1 {
+/* Estilo para el h1 de cada seccion */
+.main .sobre-nosotros .sobre-nosotros-info h2 {
     text-align: left;
-    margin: 0px 0px 5px 0px;
+    /* margin: 0px 0px 50px 0px; */
+    /* Color, tamaño u peso de la fuente */
     color: var(--texto-color);
     font-size: 2.3vw;
     font-weight: 600;
 }
 
-/* Estilo para el h1 y el parrafo */
+/* Estilo para los h2 y el parrafo de cada seccion */
 .main .sobre-nosotros .sobre-nosotros-info {
-    width: 50%; 
+    width: 50%;
     text-align: left;
     margin: 0px 0px 5px 0px;
     color: var(--texto-color);
+    /* Tamaño y ancho de los parrafos de cada seccion */
     font-size: 1rem;
     font-weight: 600;
     padding: 10px 20px 10px 40px;
-}  
+}
 
-/* -------------------Estilo para el link (+info) boton rojo-----------------------------------------------*/
+/* -------------------Estilo para el link (+info, +Mision, y +Personal) boton rojo--------------------------*/
 .main .sobre-nosotros .sobre-nosotros-info a {
     color: var(--texto-color);
     text-decoration: none;
@@ -747,11 +798,11 @@ header label {
     justify-content: center;
     transition: all 1s ease-in;
 
-} 
-
-.main .sobre-nosotros .sobre-nosotros-info .button-rojo span {
-    color: var(--link-color);
 }
+
+/* .main .sobre-nosotros .sobre-nosotros-info .button-rojo span {
+    color: var(--link-color);
+} */
 
 .main .sobre-nosotros .sobre-nosotros-info .button-rojo:hover {
     color: var(--texto-color);
@@ -764,7 +815,7 @@ header label {
     position: absolute;
     width: 100%;
     box-shadow: 2px 2px 8px rgba(228, 151, 7, 0.932)
-} 
+}
 
 .main .sobre-nosotros .sobre-nosotros-info .button-rojo rect {
     fill: none;
@@ -780,12 +831,13 @@ header label {
     stroke-dashoffset: 30;
     stroke: var(--bordes-color);
     transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
-} 
+}
+
 /* -----------------fin estilos del boton link (rojo)------------------------------------------ */
 
 
 .main .color-fondo {
-    background:var(--color-fondo-background-1);
+    background: var(--color-fondo-background-1);
 }
 
 
@@ -834,7 +886,6 @@ header label {
     transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
 }
 
-
 /* -------------Fin Estilo para el link (+ Vision) boton negro-----------------------------------------------*/
 
 
@@ -842,12 +893,11 @@ header label {
 
 
 
-/* -------------------Puntos de corte para la seccion (Acerca de Nosotros)----------------------------- */
+/* -------------------Puntos de corte para la secciones----------------------------- */
 
-/* Tamaño Para pc, tablet y dispositivos entre 600 y 1200px */
-@media only screen and (min-width: 600px) and (max-width: 1200px)  {
+/* ---------Tamaño Para pc, tablet y dispositivos entre 600 y 1200px--------------------- */
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
     .main .sobre-nosotros {
-        /* margin: 50px; */
         grid-template-columns: auto auto;
         display: grid;
         padding: 30px 30px 30px 50px;
@@ -867,106 +917,442 @@ header label {
         padding: 0px;
     }
 
-    .main .sobre-nosotros .sobre-nosotros-info h1 {
+    .main .sobre-nosotros .sobre-nosotros-info h2 {
         font-size: 20px;
     }
 }
 
-/* Tamño para celulares */
- @media only screen and (max-width: 599px)  {
-    
+/* ----------------------Fin punto de corte table y pc--------------------------------------- */
 
+/* ---------------Tamño para celulares ----------------------------------------------------*/
+@media only screen and (max-width: 599px) {
     .main .sobre-nosotros {
-        
-        display: flex; 
+
+        display: flex;
         flex-direction: column;
-        justify-content:center;
-        padding: 10px 10px 10px 40px  
-    }  
+        justify-content: center;
+        padding: 10px 10px 10px 40px
+    }
 
     .main .sobre-nosotros2 {
-        display: flex; 
+        display: flex;
         flex-direction: column-reverse;
-        justify-content:center;
-        padding: 10px 10px 10px 40px 
+        justify-content: center;
+        padding: 10px 10px 10px 40px
     }
 
     .main .sobre-nosotros .sobre-nosotros-info {
         width: auto;
-        padding: 10px 20px 10px 0px;  
+        padding: 10px 20px 10px 0px;
     }
 
-    .main .sobre-nosotros .sobre-nosotros-img img{
+    .main .sobre-nosotros .sobre-nosotros-img img {
         margin: 0px;
-        padding: 0px;           
-        height: 80%;          
-        width: 90%;        
-    }  
+        padding: 0px;
+        height: 80%;
+        width: 90%;
+    }
 
-    .main .sobre-nosotros .sobre-nosotros-info h1 {
+    .main .sobre-nosotros .sobre-nosotros-info h2 {
         font-size: 20px;
-    } 
+    }
 }
 
-/* ------------Fin punto de cote (acerca de nosotros)---------------- */
+/* --------------Fin punto de corte celular--------------------------------- */
 
-/* ------------Fin Seccion (acerca de nosotros)------------------------ */
+/* ------------Fin punto de cote de las secciones-------------------------------- */
 
-/* -----Estilos seccion (Recursos Humanos y "Tasacion y Alquiler")------- */
+
+/* Fin 2-c)----------Estilos Fin Secciones----------------------------------------------- */
+
+
+
+
+/* 2-d) -----Estilos seccion (Recursos Humanos y "Tasacion y Alquiler")------- */
 .main .columnas {
     display: grid;
-    width:100%;
+    width: 100%;
     grid-template-columns: auto auto;
-} 
-
-.main .columnas .css-grid .margen-isq {
-    width:100%;
-    margin:0px 0px 0px 0px; 
-    /* margin-right:100px;    */
 }
 
+.main .columnas .css-grid .margen-isq {
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+
+}
+
+/* Tamaño de la fuente h2 */
 .main .columnas .sobre-nosotros-info .tamano {
     font-size: 20px;
 
 }
 
 /*----------------Puntos de corte-------------------------*/
-@media only screen and (min-width: 600px) and (max-width: 1200px)  {
+
+/* ------------Tamaño tablet y pc------------------------------------------ */
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
     .main .columnas .css-grid {
-       
         display: grid;
         grid-template-columns: auto;
-        width:100%;  
-       
+        width: 100%;
     }
+
     .main .columnas .css-grid .sobre-nosotros-img {
-        /* padding-left: 0px;   */   
-        width:100%;        
-    } 
+        /* padding-left: 0px;   */
+        width: 100%;
+    }
 
     .main .columnas .css-grid .margen-isq {
-        width:100%;
-        margin:0px 0px 0px 0px; 
-        
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+
     }
 }
 
+/* ----------------Fin tamaño tablet y pc-------------------------------------------------- */
 
 
-@media only screen and (max-width: 599px)  {
+/*------------------------------------ Tamaño celular---------------------------------- */
+@media only screen and (max-width: 599px) {
     .main .columnas {
         display: flex;
-        width:100%;  
+        width: 100%;
         flex-direction: column;
-       
-    }  
-    .main .columnas .css-grid .sobre-nosotros-img {
-       width:100%;       
-    } 
 
+    }
+
+    /* Para que la imagen ocupe el 1005 de la pantalla */
+    .main .columnas .css-grid .sobre-nosotros-img {
+        width: 100%;
+    }
+
+    /* Margen del isquierdo del parrafo */
     .main .columnas .css-grid .margen-isq {
-        width:100%;
-        margin:0px 0px 0px 0px; 
-        
+        width: 100%;
+        margin: 0px 0px 0px 0px;
     }
 }
+
+/* ----------------------------------fin tamaño celular--------------------------------------- */
+
+/* Fin 2-d)-------------------------Seccion (Recursos Humanos, Tasacion y alquileres)------------ */
+
+/* Fin 2-c)------Secciones (acerca de nosotros; Nuestra Vision, Misuion a cumplir; Nuestro Enfoque)---------*/
+
+/*------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* 1-e) ---------------------------Seccion Venta y Alquiler-------------------------------------------- */
+
+/* -------------Estilo para los titulos venta y alquiler de inmuebles------------- */
+.titulo-venta-alquiler {
+    font-size: 2.5rem;
+    /* font-family: 'Montserrat'; */
+    font-weight: normal;
+    color: var(--texto-color);
+    text-align: center;
+    font-weight: 600;
+    /* margen superior de los tituos */
+    padding-top: 2rem;    
+}
+
+/* -----------------Color de fondo y margen ionferior de las secciones-------------------- */
+.venta {
+    background-color: var(--color-fondo-background-1);
+    padding-bottom: 2rem;
+    /* Borde inferior de la seccion */
+    border-bottom: 2px solid var(--bordes-color);
+}
+
+.alquiler {
+    background-color: var(--color-fondo-background-2);
+    padding-bottom: 2rem;
+    /* Borde inferior de la seccion  */
+    border-bottom: 2px solid var(--bordes-color);
+}
+/*------------------------------------------------------------------------------------*/
+
+/* Hacemos que la fila ocupe un 90% de la pantalla con un ancho maximo y centrado */
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+}
+
+/* Aplicamos flex a las columnas y centramos */
+.cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* Colocamos en linea con un determinado ancho las imagenes con una separacion de 1rem */
+.col {
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    cursor: pointer;
+}
+
+/* Posicionamos los elementos hijos en un espacio 3d */
+.container {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    /* Le ponemos perpestiva, distancia entre el eje z y el usuario */
+    perspective: 1000px;
+}
+
+
+.front,
+.back {
+    background-size: cover;
+    /* Borde o sombra de la imagen */
+    box-shadow: 0 4px 8px 0 var(--bordes-color2);
+    border-radius: 10px;
+    background-position: center;
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1),
+        -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;  
+    /* Centramos el texto de la imagen */
+    text-align: center;
+    /* Altura minima de la imagen */
+    min-height: 280px;
+    height: auto;
+    /* Color de la fuente en la imagen */
+    color: var(--texto-color);
+    /* Tamaño de fuente en el interior de la imagen */
+    font-size: 1.5rem;
+}
+
+/* Color de la parte trasera de la imagen */
+.back {
+    background: #cedce7;
+    background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+    background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+    background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+}
+
+.front:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    /* opacity: .6; */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.container:hover .front,
+.container:hover .back {
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back {
+    background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner {
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+    perspective: inherit;
+    z-index: 2;
+}
+
+.container .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container .front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container:hover .back {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container:hover .front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.front .inner p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.front .inner p:after {
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #C6D4DF;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+}
+
+
+.front .inner span {
+    /* color: rgba(255, 255, 255, 0.7); */
+    /* font-family: 'Montserrat'; */
+    font-weight: 300;
+} 
+
+/* --------------------Puntos de corte----------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .col {
+        width: calc(33.333333% - 2rem);
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .col {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .col {
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+}
+
+
+/*--------------------Comienzo del footer-----------------------------------------------*/
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    /* position: fixed;
+    left: 0;
+    bottom: 0; */
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 90px;
+  }
+  
+  .list {
+    list-style: none;
+  }
+  
+  .elem {
+    padding: 15px 0px 0px 0px;
+  }
+  
+  .elem:hover {
+    color: rgb(255, 100, 100);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .title {
+    color: rgb(255, 184, 70);
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #ffe647;
+  }
+  
+  .social-elems {
+    padding-top: 20px;
+  }
+  
+  .social-elem {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: #ff6347;
+  }
+  
+  .social-media a:hover {
+    color: #ff6347; /* A nice color for hover effect */
+  }
+  
+  @media (max-width: 700px) {
+    .footer {
+      display: flex;
+      justify-content: center;
+    }
+    .footer-content {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .title::after {
+      content: "";
+      position: absolute;
+      left: 0%;
+      top: 100%;
+      width: 30px;
+      height: 3px;
+      border-radius: 5px;
+      background-color: #ffe647;
+    }
+  }
+  
