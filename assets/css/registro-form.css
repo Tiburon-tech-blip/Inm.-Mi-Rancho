@@ -138,8 +138,8 @@
 	margin-right: 10px;
 }
 
-/* Para que estos elementos ocupen toda una columna*/
-.grupo__cond__impositiva, .grupo__foto, .grupo__terminos, .formulario__mensaje, .formulario__grupo-btn-enviar {
+/* Para que estos elementos ocupen toda una unica columna*/
+.grupo__cond__impositiva, .grupo__foto-enviar, .grupo__terminos, .formulario__mensaje, .formulario__grupo-btn-enviar {
     grid-column: span 3;
 } 
 
@@ -175,7 +175,7 @@
 }
 
 /* Activo flex como el  eje de la direccion columna y centro (condicion impositiva, subir DNI y boton enviar*/
-.formulario__grupo-btn-enviar, .grupo__cond__impositiva, .grupo__foto, .grupo__terminos {
+.formulario__grupo-btn-enviar, .grupo__cond__impositiva, .grupo__foto-enviar, .grupo__terminos {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -183,7 +183,7 @@
 
 /* --------------------Estilos de color, tamaño y trasicion del boton enviar--------------------------- */
 /* Estilos del boton Enviar */
-.formulario__btn, .grupo__foto {
+.formulario__btn, .imagen {
     /* Altura y alto de linea */
 	height: 45px;
 	line-height: 45px;
@@ -203,16 +203,17 @@
 	transition: .1s ease all;
 }
 /* Estado del hover, para la transicion del boton */
-.formulario__btn, .grupo__foto:hover {
+.formulario__btn:hover, .imagen:hover {
 	box-shadow: 3px 0px 30px var(--bordes-color2);
 }
 
-/* .grupo__foto { */
+/* Alineo el Tulo de "Subir DNI" */
+.imagen { 
 
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
-/* } */
+    align-items: center; 
+ } 
 
 /* Estilo del mensaje de exito al pie de la pagina*/
 .formulario__mensaje-exito {
@@ -261,7 +262,7 @@
 
 
 /* ----- -----  Mediaqueries ----- ----- */
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
 	.formulario {
 		grid-template-columns: 1fr;
 	}
@@ -270,29 +271,12 @@
         grid-column: 1;
     }
     
-    /*.grupo__cond__impositiva {
-        vertical-align: middle;
-    }*/
     
-    /* .grupo__cond__impositiva label> .formulario__radio {
-        display: block;  
-    }
-    */
-
-    /* input[type="radio"]:label {
-        display: block; 
-    } */
-
-    /* label > input[type=radio] {
-        display: block;
-        vertical-align: middle;
-    
-    }  */
 
 
     /* Para que el ancho del boton enviar sea del 100% */
-    .formulario__btn {
-		width: 100%;
+    .formulario__btn, .imagen {
+		width: 70%;
 	}
 
 }
@@ -336,4 +320,4 @@ input::placeholder {
 
 input[type="file"] {
     display: none;
-  }
+  } 
