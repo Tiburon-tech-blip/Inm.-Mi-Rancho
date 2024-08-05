@@ -147,14 +147,14 @@
 /* Estilos del mensaje error al pie del formulario*/
 .formulario__mensaje {
     /* Altura */
-	height: 45px;
+	height: 100%;
     text-align: center;
-    /* Altura de la line */
-	line-height: 45px;
+    /* Altura de la linea entre reglones */
+	line-height: 25px;
     /* Color de fondo */
 	background: #8b0000;
-    /* Margen interno arriba/abajo=0, isquierda/derecha=15 */
-	padding: 0 15px;
+    /* Margen interno arriba/abajo=10, isquierda/derecha=15 */
+	padding: 10px 10px;
     /* Borde redondo */
 	border-radius: 20px;
     /* Oculta el parrafo error de cada input, descomentar al aplicar estilos */
