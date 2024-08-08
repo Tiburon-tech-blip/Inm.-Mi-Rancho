@@ -58,29 +58,7 @@ a {
 /* ---------------------------------------------------------------------------- */
 
 
-/*  otro fondo */
 
-/* .header {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
-    background-size: 400% 400%;
-    position: relative;
-    animation: animate 7.5s ease-in-out infinite;
- 
-}
-
-@keyframes animate{
-    0%{
-      background-position: 0 50%;
-    }
-    50%{
-      background-position: 100% 50%;
-    }
-    100%{
-      background-position: 0 50%;
-    }
-} */
 
 /* ------------------Cominzo: Background: Fondo animado----------------------- */
 .bg {
@@ -546,6 +524,7 @@ header label {
 
 
 /* 2-b)-------------------Comienzo de la seccion del Eslider------------------------ */
+
 
 .slider-frame {
     /* Que ocupe el 100% de la pantalla */
@@ -1277,7 +1256,7 @@ header label {
 .footer {
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     /* position: fixed;
     left: 0;
     bottom: 0; */

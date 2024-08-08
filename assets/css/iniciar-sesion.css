@@ -1,7 +1,7 @@
 #registro { 
     background-color: #000000;
-    color: var(--texto-color); 
-    padding-bottom:50px;  
+    color: var(--texto-color);
+    padding-bottom:50px;   
 }
 
 /* posicion del titulo del formulario */
@@ -73,7 +73,7 @@
    
     border-radius: 30px;
     /* Ancho max del formulario con una ocupacion 100% y un ancho maximo de 1000px */
-    max-width: 1000px;  
+    max-width: 450px;  
     width: 100%;        
     /* Márgenes automático, para el ancho (esto incluye derecha e izquierda) lo cual produce que el formulario se centre */
     margin: auto;
@@ -82,7 +82,7 @@
 
    /*Aplico grid 3 columnas iguales con una separacion entre celdas de 20px */
    display: grid;
-   grid-template-columns: 0.5fr 0.5fr 0.5fr;
+   grid-template-columns: auto;
    gap: 20px;
 } 
 
@@ -174,15 +174,6 @@
 }
 
 /*---------------------------------------------*/
-/* Margen derecho, para que se separe el checkbox y el radio de sus opciones*/
-.formulario__checkbox, .formulario__radio {
-	margin-right: 10px;
-}
-
-/* Para que estos elementos ocupen toda una unica columna*/
-.grupo__cond__impositiva, .grupo__foto-enviar, .grupo__terminos, .formulario__mensaje, .formulario__grupo-btn-enviar {
-    grid-column: span 3;
-} 
 
 
 /* Estilos del mensaje error al pie del formulario*/
@@ -216,7 +207,7 @@
 }
 
 /* Activo flex como el  eje de la direccion columna y centro (condicion impositiva, subir DNI y boton enviar*/
-.formulario__grupo-btn-enviar, .grupo__cond__impositiva, .grupo__foto-enviar, .grupo__terminos {
+.formulario__grupo-btn-enviar {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -224,7 +215,7 @@
 
 /* --------------------Estilos de color, tamaño y trasicion del boton enviar--------------------------- */
 /* Estilos del boton Enviar */
-.formulario__btn, .imagen {
+.formulario__btn {
     /* Altura y alto de linea */
 	height: 45px;
 	line-height: 45px;
@@ -244,17 +235,11 @@
 	transition: .1s ease all;
 }
 /* Estado del hover, para la transicion del boton */
-.formulario__btn:hover, .imagen:hover {
+.formulario__btn:hover {
 	box-shadow: 3px 0px 30px var(--bordes-color2);
 }
 
-/* Alineo el Tulo de "Subir DNI" */
-.imagen { 
 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
- } 
 
 /* Estilo del mensaje de exito al pie de la pagina*/
 .formulario__mensaje-exito {
@@ -310,50 +295,16 @@
     cursor:pointer;
 }
 
-/* ----- -----  Mediaqueries ----- ----- */
-@media only screen and (max-width: 800px) {
-	.formulario {
-		grid-template-columns: 1fr;
-	}
 
-    .grupo__cond__impositiva, .grupo__foto, .grupo__terminos, .formulario__mensaje, .formulario__grupo-btn-enviar {
-        grid-column: 1;
-    }
-    
-    /* Para que el ancho del boton enviar sea del 100% */
-    .formulario__btn, .imagen {
-		width: 70%;
-	}
-
-}
 
 
 
 
 
 /*--------------------------------------------------------------*/
-/* Estilo para el texto de la fecha */
-.formulario__grupo-input input {
-  color: orange;  
-  font-size: 1.1rem; 
-  font-weight: 700;
-}  
 
-/* Estilo de texto del select*/
-.formulario__grupo-input select {
 
-    color: orange; 
-    /* Tamaño de fuente dentro de la caja */
-    font-size: 1rem;  
-    /* Peso de fuente dentro de la caja */
-    font-weight: 700;
-  } 
-
-  /* Color de texto de los input y de las opciones del select */
-.input-field::placeholder, option {
-    color: orange;
-    font-weight: bold;
-  }
+ 
 
 /* Estilo para el texto de los input (nombre, apellido, n de documento, n de telefono, correo electronico y pasword */
 input::placeholder {
@@ -364,6 +315,4 @@ input::placeholder {
     font-weight: 700;
 }
 
-input[type="file"] {
-    display: none;
-  } 
+
