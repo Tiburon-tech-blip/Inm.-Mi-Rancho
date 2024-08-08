@@ -79,7 +79,7 @@
                 <li><a href="#">Contactos</a>
                 <li><a href="#">Ingresar +</a>
                     <ul>
-                        <li><a href="./pages/registro.html">Registro</a></li>
+                        <li><a href="#">Registro</a></li>
                         <li><a href="#">Iniciar Sesion</a></li>
                     </ul>
                 </li>
@@ -102,7 +102,7 @@
             <form action="" class="formulario" id="formulario">
                 
                 <!-- Grupo: Correo Electronico -->
-                <div class="formulario__grupo" id="grupo__correo">
+                <div class="formulario__grupo formulario__grupo-incorrecto" id="grupo__correo">
                     <label for="correo" class="formulario__label">Correo Electrónico</label>
                     <div class="formulario__grupo-input">
                         <input type="email" class="formulario__input" name="correo" id="correo"
@@ -113,8 +113,7 @@
                     </div>
 
                     <!-- mensage de error: Agregar para la validacion con js -->
-                    <p class="formulario__input-error">El correo solo puede contener letras, número, puntos, guiones
-                        y guion bajo.</p>
+                    <p class="formulario__input-error">El correo es incorrecto.</p>
                 </div>
 
                 <!-- Grupo: Contraseña -->
@@ -126,13 +125,12 @@
                     </div>
 
                     <!-- mensage de error: Agregar para la validacion con js -->
-                    <p class="formulario__input-error">Debe contener al menos una letra mayúsculas, minúscula,
-                        caracteres especiales y números</p>
+                    <p class="formulario__input-error">La contraseña es incorrecta.</p>
                 </div>
 
                 
                 <div class="formulario__grupo formulario__grupo-btn-enviar">
-                    <button type="submit" class="formulario__btn">Enviar</button>
+                    <button type="submit" class="formulario__btn">Ingresar</button>
                     <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado
                         exitosamente!</p>
                 </div>

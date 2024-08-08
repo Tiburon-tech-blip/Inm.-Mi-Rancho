@@ -83,7 +83,8 @@
    /*Aplico grid 3 columnas iguales con una separacion entre celdas de 20px */
    display: grid;
    grid-template-columns: 0.5fr 0.5fr 0.5fr;
-   gap: 20px;
+   column-gap: 20px;
+   row-gap: 5px;
 } 
 
 /* Estilos para los labels */
@@ -332,7 +333,7 @@
 
 
 /*--------------------------------------------------------------*/
-/* Estilo para el texto de la fecha */
+/* Estilo para el texto cuando hago foco en el interior de los input*/
 .formulario__grupo-input input {
   color: orange;  
   font-size: 1.1rem; 
