@@ -28,6 +28,7 @@
     /* porcentaje de Visibilidad del titulo */
     background-size: 80%;
     animation: animatet 3s linear infinite;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -101,10 +102,6 @@
 	/* cursor: pointer; */
 }
 
-/* Nos situamos en una posicion relativa, con repecto a los input y iconos para luego poner los iconos en posicion absoluta y meterlos dentro del input*/
-.formulario__grupo-input {
-	position: relative;
-}
 
 /* Estilos para los input */
 .formulario__input {   /* ---------------ver-para provincias----------*/
@@ -142,75 +139,31 @@
 .formulario__input-error {
     /* Tamaño de fuente y color de fondo*/
 	font-size: 13px;
+    padding-top: 10px;
     color: #ffffff;
    
     /* Para que se oculte el mensaje; descomentar una vez que esten definidos los colores  */
     /* Descomentar al establecer estilos */
 
 
-	/*display: none;*/
+	display: none;
 }
 
-/* Cuando hago foco en el input, el mensaje pasa a un estado activo y se bloquea*/
+/* Cuando hago foco en el input, el mensaje pasa a un estado activo y en bloquea*/
 .formulario__input-error-activo {
     
 	display: block;
 }
 
-/* Estado del icono de validacion, del  icono, cuando sea (incorrecto=opacity="0" oculta), (correcto=opacity=1 aparece) */
-.formulario__validacion-estado {
-    /* posicion absoluta */
-	position: absolute;
-    /* Desplaza de derecha a isquierda el icono */
-	right: 10px;
-    /* Desplazo hacia abajo el icono */
-	bottom: 14px;
-    /* Para acegurarme de que va a estar por encima de otros elementos */
-	z-index: 100;
-    /* Tamaño del icono */
-	font-size: 20px;
-    /* opacacidad de 0 para que no se muetre el icono, solo se active cuando tengamos un error */
-    
-
-
-	opacity: 0;
-}
 
 /*---------------------------------------------*/
 
 
-/* Estilos del mensaje error al pie del formulario*/
-.formulario__mensaje {
-    /* Altura */
-	height: 100%;
-    text-align: center;
-    /* Altura de la linea entre reglones */
-	line-height: 25px;
-    /* Color de fondo */
-	background: #8b0000;
-    /* Margen interno arriba/abajo=10, isquierda/derecha=15 */
-	padding: 10px 10px;
-    /* Borde redondo */
-	border-radius: 20px;
-    /* Oculta el parrafo error de cada input, descomentar al aplicar estilos */
 
-
-
-	/*display: none;*/
-}
-
-/* cuando el mensaje de error pasa a estado activo cambio el display, descomentar cuando tenga los estilos de color*/
-.formulario__mensaje-activo {
-	display: block;
-}
-
-/* Margen del parrafo error al pie de pagina*/
-.formulario__mensaje p {
-	margin: 0;
-}
 
 /* Activo flex como el  eje de la direccion columna y centro (condicion impositiva, subir DNI y boton enviar*/
 .formulario__grupo-btn-enviar {
+    padding-top: 15px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -219,14 +172,15 @@
 /* --------------------Estilos de color, tamaño y trasicion del boton enviar--------------------------- */
 /* Estilos del boton Enviar */
 .formulario__btn {
+    font-size: 15px;
     /* Altura y alto de linea */
 	height: 45px;
 	line-height: 45px;
     /* Ancho y color de fondo del boton*/
-	width: 30%;
-    background: #CEF6F5;
+	width: 40%;
+    background: #8b0000;
     /* Color de texto del boton*/
-	color: #006666;
+	color: #ffffff;
     /* estilo en negrita */
 	font-weight: bold;
     /* Le quito el borde por defecto */
@@ -241,66 +195,6 @@
 .formulario__btn:hover {
 	box-shadow: 3px 0px 30px var(--bordes-color2);
 }
-
-
-
-/* Estilo del mensaje de exito al pie de la pagina*/
-.formulario__mensaje-exito {
-	font-size: 14px;
-	color: var(--texto-color);
-    opacity: 1;
-    /* Para que se oculte el mensaje; descomentar una vez que esten definidos los colores */
-
-
-	/*display: none;*/
-}
-
-/* Cuando la clase esta activa, tiene un dipalay tipo bloqueado, es decir no se muestran los mensages */
-.formulario__mensaje-exito-activo {
-	display: block;
-
-}
-
-/* -------------------- -----  Estilos para Validacion ---------------- ----- */
-
-/* Estilo del icono correcto  color y opacacidad, acceso al estado de validacion*/
-/* Cambian de color (incorrecto a correcto, dependiendo de la clase que tengo asignadas en los <div> "formulario__grupo-correcto", o "formulario__grupo-incorrecto" */
-
-
-/* Estado correcto, color y visualizacion del icono */
-.formulario__grupo-correcto .formulario__validacion-estado {
-	color: #1ed12d;
-	opacity: 1;
-}
-
-/* Estado incorrecto, icono rojo */
-.formulario__grupo-incorrecto .formulario__label {
-	color: #bb2929;
-}
-
-/* Cuando el estado sea incorrecto accedo a (.formulario__validacion-estado)*/
-.formulario__grupo-incorrecto .formulario__validacion-estado {
-	color: #bb2929;
-	opacity: 1;
-}
-
-/* Color del borde del input cuando el estado es incorrecto */
-.formulario__grupo-incorrecto .formulario__input {
-	border: 4px solid #bb2929;
-}
-
-.impo{
-    text-align:center;
-    padding-bottom: 10px;
-}  
-
-.formulario__radio  {
-    cursor:pointer;
-}
-
-
-
-
 
 
 

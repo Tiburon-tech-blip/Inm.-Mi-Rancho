@@ -28,7 +28,8 @@
     /* porcentaje de Visibilidad del titulo */
     background-size: 80%;
     animation: animatet 3s linear infinite;
-    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-background-clip: text; 
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
@@ -44,6 +45,7 @@
  
 /* -------Inicio del formulario---------------------- */
 
+/* Estilo del background*/
 .formulario {
     width: 100%;
     height: 100%;
@@ -64,6 +66,7 @@
       background-position: 0 50%;
     }
 } 
+/*----------------fin backgraund------------------------*/
 
 .formulario {
   
@@ -141,15 +144,16 @@
     /* Tamaño de fuente y color de fondo*/
 	font-size: 13px;
     color: #ffffff;
+    padding-top: 10px;
    
     /* Para que se oculte el mensaje; descomentar una vez que esten definidos los colores  */
     /* Descomentar al establecer estilos */
 
 
-	/*display: none;*/
+	display: none;
 }
 
-/* Cuando hago foco en el input, el mensaje pasa a un estado activo y se bloquea*/
+/* Cuando hago foco en el input, el mensaje pasa a un estado block*/
 .formulario__input-error-activo {
     
 	display: block;
@@ -185,6 +189,11 @@
     grid-column: span 3;
 } 
 
+/* cuando el mensaje de error pasa a estado activo cambio el display, descomentar cuando tenga los estilos de color*/
+.formulario__mensaje-activo {
+	display: block; 
+}
+
 
 /* Estilos del mensaje error al pie del formulario*/
 .formulario__mensaje {
@@ -199,11 +208,12 @@
 	padding: 10px 10px;
     /* Borde redondo */
 	border-radius: 20px;
-    /* Oculta el parrafo error de cada input, descomentar al aplicar estilos */
+    font-size: 17px;
+    /* Oculta el parrafo error al pie del formulario, descomentar al aplicar estilos */
 
 
 
-	/*display: none;*/
+	display: none;
 }
 
 /* cuando el mensaje de error pasa a estado activo cambio el display, descomentar cuando tenga los estilos de color*/
@@ -231,9 +241,10 @@
 	line-height: 45px;
     /* Ancho y color de fondo del boton*/
 	width: 30%;
-    background: #CEF6F5;
+    background: #8b0000;
     /* Color de texto del boton*/
-	color: #006666;
+	color: #ffffff;
+    font-size: 15px;
     /* estilo en negrita */
 	font-weight: bold;
     /* Le quito el borde por defecto */
@@ -259,16 +270,17 @@
 
 /* Estilo del mensaje de exito al pie de la pagina*/
 .formulario__mensaje-exito {
-	font-size: 14px;
+	font-size: 18px;
+    padding-top: 10px;
 	color: var(--texto-color);
     opacity: 1;
     /* Para que se oculte el mensaje; descomentar una vez que esten definidos los colores */
 
 
-	/*display: none;*/
+	display: none;
 }
 
-/* Cuando la clase esta activa, tiene un dipalay tipo bloqueado, es decir no se muestran los mensages */
+/* Cuando la clase esta activa, tiene un dipalay tipo block */
 .formulario__mensaje-exito-activo {
 	display: block;
 
