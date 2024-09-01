@@ -79,8 +79,8 @@
                 <li><a href="#">Contactos</a>
                 <li><a href="#">Ingresar +</a>
                     <ul>
-                        <li><a href="#">Registro</a></li>
-                        <li><a href="#">Iniciar Sesion</a></li>
+                        <li><a href="../pages/registro.html">Registro</a></li>
+                        <li><a href="../pages/iniciar-sesion.html">Iniciar Sesion</a></li>
                     </ul>
                 </li>
             </ul>
@@ -102,14 +102,13 @@
             <form action="" class="formulario" id="formulario">
                 
                 <!-- Grupo: Correo Electronico -->
-                <div class="formulario__grupo formulario__grupo-incorrecto" id="grupo__correo">
+                <div class="formulario__grupo .formulario__grupo-incorrecto" id="grupo__correo">
                     <label for="correo" class="formulario__label">Correo Electrónico</label>
                     <div class="formulario__grupo-input">
                         <input type="email" class="formulario__input" name="correo" id="correo"
                             placeholder="Ej:correo@correo.com">
 
-                        <!-- Icono de validacion de Font Awesone -->
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        
                     </div>
 
                     <!-- mensage de error: Agregar para la validacion con js -->
@@ -121,7 +120,7 @@
                     <label for="password" class="formulario__label">Contraseña</label>
                     <div class="formulario__grupo-input">
                         <input type="password" class="formulario__input" name="password" id="password">
-                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                       
                     </div>
 
                     <!-- mensage de error: Agregar para la validacion con js -->
@@ -131,8 +130,7 @@
                 
                 <div class="formulario__grupo formulario__grupo-btn-enviar">
                     <button type="submit" class="formulario__btn">Ingresar</button>
-                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado
-                        exitosamente!</p>
+                    
                 </div>
 
             </form>
@@ -146,13 +144,14 @@
                 <div class="title">Contacto</div>
                 <li class="list">
                     <ul class="elem">
-                        Nombre
+                        Inmobiliaria Mi Rancho-<br>
+                        Nombre: Jorge Petruccelli
                     </ul>
                     <ul class="elem">
-                        Telefono
+                        Tel: (2241) 15-471517
                     </ul>
                     <ul class="elem">
-                        Mail
+                        Email: inm-Mi-Rancho@gmail.com
                     </ul>
                 </li>
             </div>
@@ -160,13 +159,13 @@
                 <div class="title">Direccion</div>
                 <li class="list">
                     <ul class="elem">
-                        Direccion
+                        Direccion: Libres del Sur Nº195
                     </ul>
                     <ul class="elem">
-                        Ciudad
+                        Ciudad: Chascomus
                     </ul>
                     <ul class="elem">
-                        Pais
+                        Pais: Argentina
                     </ul>
                 </li>
             </div>
@@ -174,22 +173,38 @@
                 <div class="title">Compania</div>
                 <li class="list">
                     <ul class="elem">
-                        Servicios
+                        <a href="../index.html">Inicio</a>
                     </ul>
                     <ul class="elem">
-                        Sobre nosotros
+                        <a href="#">Conocenos</a>
                     </ul>
                     <ul class="elem">
-                        Carreras
+                        <a href="#">Propiedades</a>
                     </ul>
                     <ul class="elem">
-                        Clientes
+                        <a href="#">Contactos</a>
                     </ul>
                 </li>
             </div>
             <div class="social-media">
                 <div class="title">Seguinos</div>
-                <div class="social-elems">
+                <div class="redes-sociales">
+                    <a class="social-elems" href="https://api.whatsapp.com/send?phone=2241471517" target="_blank">
+                        <img src="../assets/img/logo/whatsapp.png" alt="logo whatsapp">
+                    </a>
+                    <a class="social-elems" href="https://www.facebook.com/cafeteria.brig" target="_blank">
+                        <img src="../assets/img/logo/facebook.png" alt="logo facebook">
+                    </a>
+
+                    <a class="social-elems" href="https://www.instagram.com/" target="_blank">
+                        <img src="../assets/img/logo/instagram.png" alt="logo instagram">
+                    </a>
+
+                    <a class="social-elems" href="mailto:inm-Mi-Rancho@gmail.com" target="_blank">
+                        <img src="../assets/img/logo/correo-electronico-vacio.png" alt="Mail">
+                    </a>
+                </div>
+                <!-- <div class="social-elems">
                     <a class="social-elem" href="https://facebook.com" target="_blank"><i
                             class="fab fa-facebook-f"></i></a>
                     <a class="social-elem" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -197,7 +212,7 @@
                             class="fab fa-instagram"></i></a>
                     <a class="social-elem" href="https://linkedin.com" target="_blank"><i
                             class="fab fa-linkedin-in"></i></a>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>

@@ -1,0 +1,16 @@
+main .sectionPrincipal{
+    /* color:white; */
+    background: url(../img/slider/ciudad.jpg); 
+    background-size: cover;
+    background-position: center; 
+    height: 50vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.sectionPrincipal {
+    color:#ffffff
+}

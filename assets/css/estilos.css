@@ -30,6 +30,7 @@ body {
 /* Quito el subrayado a los links */
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -375,8 +376,8 @@ header .navbar .menu li:hover>ul {
 }
 
 /* Ocultamos icono de menu amburgueza y le ponemos color, tamaño y cursor */
-header label {
-    font-size: 38px;
+.header label {
+    font-size: 30px;
     color: var(--texto-color);
     cursor: pointer;
     display: none;
@@ -1074,7 +1075,7 @@ header label {
 
 /* Colocamos en linea con un determinado ancho las imagenes con una separacion de 1rem */
 .col {
-    width: calc(25% - 2rem);
+    width: calc(33.333333% - 2rem);
     margin: 1rem;
     cursor: pointer;
 }
@@ -1107,7 +1108,7 @@ header label {
     /* Centramos el texto de la imagen */
     text-align: center;
     /* Altura minima de la imagen */
-    min-height: 280px;
+    min-height: 320px;
     height: auto;
     /* Color de la fuente en la imagen */
     color: var(--texto-color);
@@ -1121,6 +1122,8 @@ header label {
     background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
     background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
     background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+    font-size: 1.0rem;
+    text-align: center;
 }
 
 .front:after {
@@ -1162,7 +1165,7 @@ header label {
     position: absolute;
     left: 0;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     outline: 1px solid transparent;
@@ -1228,13 +1231,14 @@ header label {
 /* --------------------Puntos de corte----------------------------------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .col {
-        width: calc(33.333333% - 2rem);
+        width: calc(50% - 2rem);
     }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
     .col {
-        width: calc(50% - 2rem);
+        width: 100%;
+        /* width: calc(50% - 2rem); */
     }
 }
 
@@ -1277,13 +1281,18 @@ header label {
     list-style: none;
   }
   
+  .list .elem a {
+    list-style: none;
+    color: #ffffff;
+  }
+
   /* Separacion entre links */
   .elem {
     padding: 15px 0px 0px 0px;
   }
   
   /* Efecto cunado ago foco sobre los links */
-  .elem:hover {
+  .elem a:hover {
     color: rgb(255, 100, 100);
     cursor: pointer;
     transition: color 0.3s ease;
@@ -1348,7 +1357,7 @@ header label {
       flex-direction: column;
       gap: 20px;
     }
-    /* .title::after {
+     .title::after {
       content: "";
       position: absolute;
       left: 0%;
@@ -1357,6 +1366,6 @@ header label {
       height: 3px;
       border-radius: 5px;
       background-color: #ffe647;
-    } */
-  }
+    } 
+}
   

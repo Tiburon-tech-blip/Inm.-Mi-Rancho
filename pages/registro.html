@@ -17,7 +17,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/icono/mansion.ico">
     <!-- Link a la hoja de estilo css -->
     <link rel="stylesheet" href="../assets/css/estilos.css">
-    <link rel="stylesheet" href="../assets/css/registro-form.css">
+    <link rel="stylesheet" href="../assets/css/registro.css">
     <!-- Titulo de la pestaña -->
     <title>Inmobiliaria Mi Rancho</title>
 </head>
@@ -79,8 +79,8 @@
                 <li><a href="#">Contactos</a>
                 <li><a href="#">Ingresar +</a>
                     <ul>
-                        <li><a href="./pages/registro.html">Registro</a></li>
-                        <li><a href="#">Iniciar Sesion</a></li>
+                        <li><a href="../pages/registro.html"">Registro</a></li>
+                        <li><a href="../pages/iniciar-sesion.html">Iniciar Sesion</a></li>
                     </ul>
                 </li>
             </ul>
@@ -106,7 +106,7 @@
                 <!-- En el primer caso el icono va a estar rojo, y en el segundo negro aplcado en el css -->
 
 
-                <div class="formulario__grupo formulario__grupo-incorrecto" id="grupo__nombre">
+                <div class="formulario__grupo" id="grupo__nombre">
                     <label for="nombre" class="formulario__label">Nombre</label>
                     <div class="formulario__grupo-input">
                         <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre">
@@ -116,8 +116,7 @@
                     </div>
 
                     <!-- mensage de error: Agregar para la validacion con js -->
-                    <p class="formulario__input-error">aaaaa kkkk lllll ppp ppppp ppppppp ppp p pp p pp pp p pp p pp
-                        p p pp pp pppp</p>
+                    <p class="formulario__input-error">El Nomnbre solo puede contener letras y espacios</p>
                 </div>
 
                 <!-- Grupo: apellido-->
@@ -132,28 +131,28 @@
                     </div>
 
                     <!-- mensage de error: Agregar para la validacion con js -->
-                    <p class="formulario__input-error">******** **** ******</p>
+                    <p class="formulario__input-error">El Nomnbre solo puede contener letras y espacios</p>
                 </div>
 
                 <!-- Grupo: Fecha -->
                 <div class="formulario__grupo" id="grupo__fecha">
                     <label for="fecha" class="formulario__label">Fecha de Naciminto</label>
                     <div class="formulario__grupo-input">
-                        <input type="date" class="formulario__input" name="fecha" id="fecha">
+                        <input type="text" class="formulario__input" name="fecha" id="fecha" placeholder="dd/mm/aaaa">
 
                         <!-- Icono de validacion de Font Awesone -->
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
 
                     <!-- mensage de error: Agregar para la validacion con js -->
-                    <p class="formulario__input-error">******* ***** ***** ******</p>
+                    <p class="formulario__input-error">la fecha tiene que tener formato dd/mm/aaaa</p>
                 </div>
 
                 <!-- Grupo: documento-->
-                <div class="formulario__grupo" id="grupo__documento">
-                    <label for="documento" class="formulario__label">Nº de Documento</label>
+                <div class="formulario__grupo" id="grupo__docu">
+                    <label for="docu" class="formulario__label">Nº de Documento</label>
                     <div class="formulario__grupo-input">
-                        <input type="number" class="formulario__input" name="documento" id="documento"
+                        <input type="number" class="formulario__input" name="docu" id="docu"
                             placeholder="Nº de Documento">
 
                         <!-- Icono de validacion de Font Awesone -->
@@ -161,8 +160,9 @@
                     </div>
 
                     <!-- mensage de error: Agregar para la validacion con js -->
-                    <p class="formulario__input-error">Solo puede contener número con un maximo de 8 digitos.</p>
+                    <p class="formulario__input-error">Solo puede contener número de 7 a 8 digitos.</p>
                 </div>
+
 
                 <!-- Grupo: telefono -->
                 <div class="formulario__grupo" id="grupo__telefono">
@@ -179,11 +179,11 @@
                     <p class="formulario__input-error">Solo puede contener número con un maximo de 14 digitos.</p>
                 </div>
 
-                <!-- Grupo: provincia -->
+                <!-- Grupo: Tipo de inmueble -->
                 <div class="formulario__grupo" id="grupo__provincia">
                     <label for="provincia" class="formulario__label">Tipo de Inmueble</label>
                     <div class="formulario__grupo-input">
-                        <select class="formulario__input" name="provincia" id="provincia">
+                        <select class="formulario__input" name="inmueble" id="inmueble">
                             <option value="">Inmueble</option>
                             <option value="DEP">Departamento</option>
                             <option value="CAS">Casa</option>
@@ -201,7 +201,7 @@
                     </div>
 
                     <!-- mensage de error: Agregar para la validacion con js -->
-                    <p class="formulario__input-error">****** ****** ****** **********</p>
+                    <p class="formulario__input-error">Este campo es obligatorio</p>
                 </div>
 
                 <!-- Grupo: Correo Electronico -->
@@ -229,8 +229,7 @@
                     </div>
 
                     <!-- mensage de error: Agregar para la validacion con js -->
-                    <p class="formulario__input-error">Debe contener al menos una letra mayúsculas, minúscula,
-                        caracteres especiales y números</p>
+                    <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
                 </div>
 
                 <!-- Grupo: Contraseña 2 -->
@@ -264,7 +263,7 @@
                 <!--Subir foto -->
                 <div class="grupo__foto grupo__foto-enviar" id="grupo__foto">
                     <label for="foto" class="formulario__label imagen">Subi "DNI"</label>
-                    <input type="file" name="foto" class="foto" id="foto" required>
+                    <input type="file" name="foto" class="foto" id="foto" accept=".jpg, .jpeg, .png, .jpeg" onchange="return validarExt()">
                 </div>
 
 
@@ -278,12 +277,11 @@
 
 
                 <div class="formulario__mensaje" id="formulario__mensaje">
-                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
-                        correctamente. </p>
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Hay campos sin completar o estan incorrectos. </p>
                 </div>
 
                 <div class="formulario__grupo formulario__grupo-btn-enviar">
-                    <button type="submit" class="formulario__btn">Enviar</button>
+                    <button type="submit" class="formulario__btn" onclick="return vacio();">Enviar</button>
                     <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado
                         exitosamente!</p>
                 </div>
@@ -299,13 +297,14 @@
                 <div class="title">Contacto</div>
                 <li class="list">
                     <ul class="elem">
-                        Nombre
+                        Inmobiliaria Mi Rancho-<br>
+                        Nombre: Jorge Petruccelli
                     </ul>
                     <ul class="elem">
-                        Telefono
+                        Tel: (2241) 15-471517
                     </ul>
                     <ul class="elem">
-                        Mail
+                        Email: inm-Mi-Rancho@gmail.com
                     </ul>
                 </li>
             </div>
@@ -313,13 +312,13 @@
                 <div class="title">Direccion</div>
                 <li class="list">
                     <ul class="elem">
-                        Direccion
+                        Direccion: Libres del Sur Nº195
                     </ul>
                     <ul class="elem">
-                        Ciudad
+                        Ciudad: Chascomus
                     </ul>
                     <ul class="elem">
-                        Pais
+                        Pais: Argentina
                     </ul>
                 </li>
             </div>
@@ -327,22 +326,38 @@
                 <div class="title">Compania</div>
                 <li class="list">
                     <ul class="elem">
-                        Servicios
+                        <a href="../index.html">Inicio</a>
                     </ul>
                     <ul class="elem">
-                        Sobre nosotros
+                        <a href="#">Conocenos</a>
                     </ul>
                     <ul class="elem">
-                        Carreras
+                        <a href="#">Propiedades</a>
                     </ul>
                     <ul class="elem">
-                        Clientes
+                        <a href="#">Contactos</a>
                     </ul>
                 </li>
             </div>
             <div class="social-media">
                 <div class="title">Seguinos</div>
-                <div class="social-elems">
+                <div class="redes-sociales">
+                    <a class="social-elems" href="https://api.whatsapp.com/send?phone=2241471517" target="_blank">
+                        <img src="../assets/img/logo/whatsapp.png" alt="logo whatsapp">
+                    </a>
+                    <a class="social-elems" href="https://www.facebook.com/cafeteria.brig" target="_blank">
+                        <img src="../assets/img/logo/facebook.png" alt="logo facebook">
+                    </a>
+
+                    <a class="social-elems" href="https://www.instagram.com/" target="_blank">
+                        <img src="../assets/img/logo/instagram.png" alt="logo instagram">
+                    </a>
+
+                    <a class="social-elems" href="mailto:inm-Mi-Rancho@gmail.com" target="_blank">
+                        <img src="../assets/img/logo/correo-electronico-vacio.png" alt="Mail">
+                    </a>
+                </div>
+                <!-- <div class="social-elems">
                     <a class="social-elem" href="https://facebook.com" target="_blank"><i
                             class="fab fa-facebook-f"></i></a>
                     <a class="social-elem" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -350,13 +365,14 @@
                             class="fab fa-instagram"></i></a>
                     <a class="social-elem" href="https://linkedin.com" target="_blank"><i
                             class="fab fa-linkedin-in"></i></a>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>
 
-    
 
+    
+    <script src="../assets/js/registro.js"></script>
 
 </body>
 
