@@ -1,0 +1,187 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", helvetica, arial;
+    color:#ffffff;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 99%;
+}
+
+/* Estilo para el titulo */
+h1 {
+    margin-top: 15px;
+    font-size: 3rem;
+}
+
+/* Espacio  ocupado con respecto al contenedor padre por todo el cotenido*/
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Divido el contenido en dos columnas */
+.dos-columnas {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* margen interno de los parrafos */
+.entrada-blog .parrafo {
+   padding: 20px 50px 20px 10px;
+} 
+
+/* centro la foto en la parte derecha */
+.centradoFoto {
+    display: flex;
+    justify-content: center;
+}
+
+/* Contraste de la foto y la tabla */
+.margen2 {
+    background-color: #32383b;
+    margin-top: 80px;
+    padding: 20px;
+    height: 90%;
+    border-radius: 20px;
+}
+
+/* sub titolo de la foto */
+.titulo {
+    text-align: center;
+}
+ 
+/* Estilo para la tabla */
+table {
+    margin-top: 20px;
+    width: 25vw;
+    color: #000000;
+    font-weight: bold;
+}
+
+table tr td {
+    padding: 5px 0px 5px 10px;
+}
+
+/* centrado de los numeros de la tabla */
+.centrado {
+    text-align: center;
+} 
+
+/* Color de los de los distintos campos de la tabla */
+tr:nth-child(1) {
+    background-color:aquamarine;
+}
+tr:nth-child(2) {
+    background-color:rgb(219, 223, 17);
+}
+tr:nth-child(3) {
+    background-color:rgb(9, 247, 116);
+}
+tr:nth-child(4) {
+    background-color:rgb(223, 19, 104);
+}
+tr:nth-child(5) {
+    background-color:rgb(247, 243, 11);
+}
+tr:nth-child(6) {
+    background-color:rgb(13, 183, 235);
+}
+tr:nth-child(7) {
+    background-color:rgb(247, 185, 233);
+}
+tr:nth-child(8) {
+    background-color:rgb(243, 114, 8);
+}
+tr:nth-child(9) {
+    background-color:rgb(9, 243, 9);
+}
+tr:nth-child(10) {
+    background-color:rgb(241, 15, 15);
+}
+tr:nth-child(11) {
+    background-color:rgb(240, 9, 248);
+}
+
+/* Estilo de animacion del titulo*/
+.titulo-form {
+    position: relative;
+    text-transform: uppercase; 
+    /* font-size: 1.5em; */
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    /* porcentaje de Visibilidad del titulo */
+    background-size: 80%;
+    animation: animatet 3s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animatet {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+
+
+
+/* Estilos de animacion para los parrafos */
+.entrada-blog p {  
+    letter-spacing:1.5px;
+    line-height:20px;
+    color: lightblue;
+    text-shadow: 5px 5px 30px blue;
+    animation-name: repeat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-weight: lighter;
+}
+
+@keyframes repeat {
+
+    0% {color: lightblue; text-shadow: 5px 5px 30px lightblue;}
+    20% {color: #45aaf2; text-shadow: 5px 5px 30px  #45aaf2;}
+    40% {color: #2d98da; text-shadow: 5px 5px 30px  #2d98da;}
+    60% {color: #4b7bec; text-shadow: 5px 5px 30px  #2d98da;}
+    80% {color: #3867d6; text-shadow: 5px 5px 30px  #3867d6;}
+    100% {color: lightblue; text-shadow: 5px 5px 30px  lightblue;}
+  
+  }
+
+
+  /* ----------------------------Tamaño celular---------------------------- */
+@media only screen and (max-width:600px) {
+    .tamanoCelular {
+        display: flex;
+        flex-direction: column;
+    }
+    table {
+        margin-top: 20px;
+        width: 400px;
+        color: #000000;
+        font-weight: bold;
+    }
+    /* margen interno de los parrafos */
+.entrada-blog .parrafo {
+    padding: 20px 10px 20px 10px;
+ } 
+ 
+}
+
+
+

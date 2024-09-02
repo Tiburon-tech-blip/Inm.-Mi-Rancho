@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Iconos de fonawesome*************************** -->
+    <script src="https://kit.fontawesome.com/2b1875b7b2.js" crossorigin="anonymous"></script>
+
+    <!-- Fuente de google Fonts*********************** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+
+    <!-- Link al icono de la pestaña del navegador -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/icono/mansion.ico">
+    <!-- Link a la hoja de estilo css -->
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <link rel="stylesheet" href="../assets/css/iniciar-sesion.css">
+    <!-- Titulo de la pestaña -->
+    <title>Inmobiliaria Mi Rancho</title>
+</head>
+
+<body>
+     <!-- <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div> -->
+
+
+    <header class="header">
+        <div class="logo fire">
+            <a class="logo2 Blazing" href="#">
+                <img src="../assets/img/logo/logocasa.png" alt="LogoInmobiliaria" title="LogoInmobiliaria" width="55"
+                    height="55"><span class="name"> Mi Rancho</span>
+            </a>
+        </div>
+
+        <input type="checkbox" id="menu-bar">
+        <!-- <label for="menu-bar">Menu</label> -->
+
+        <label for="menu-bar">
+            <i class="fa-solid fa-layer-group"></i>
+        </label>
+
+        <nav class="navbar">
+
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#">Ventas +</a>
+                    <ul>
+                        <li><a href="#">Internacional</a></li>
+                        <li><a href="#">Venta Departamentos</a></li>
+                        <li><a href="#">Venta Casas</a></li>
+                        <li><a href="#">Venta Terrenos</a></li>
+                        <li><a href="#">Venta Local</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Alquiler +</a>
+                    <ul>
+                        <li><a href="#">Alquiler Temporario</a></li>
+                        <!-- <li><a href="#">Internacional</a></li> -->
+                        <li><a href="#">Alquiler Campo</a></li>
+                        <li><a href="#">Alquiler Galpon</a></li>
+                        <li><a href="#">Alquiler Casas</a></li>
+                        <li><a href="#">Alquiler Departamentos</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Otros +</a>
+                    <ul>
+                        <li><a href="#">Tasaciones</a></li>
+                        <li><a href="#">Emprendimientos</a></li>
+                        <li><a href="#">Sobre Nosotros</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Contactos</a>
+                <li><a href="#">Ingresar +</a>
+                    <ul>
+                        <li><a href="../pages/registro.html">Registro</a></li>
+                        <li><a href="../pages/iniciar-sesion.html">Iniciar Sesion</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+
+
+    </header> 
+
+
+   
+
+    <!-- ******************Comienzo del conteneido princiapal****************** -->
+    <main >
+        <section id="registro">
+            <div class="titulo-form-inicio">
+                <h2 class="titulo-form">Iniciar sesion</h2>
+            </div>
+            <form action="" class="formulario" id="formulario">
+                
+                <!-- Grupo: Correo Electronico -->
+                <div class="formulario__grupo .formulario__grupo-incorrecto" id="grupo__correo">
+                    <label for="correo" class="formulario__label">Correo Electrónico</label>
+                    <div class="formulario__grupo-input">
+                        <input type="email" class="formulario__input" name="correo" id="correo"
+                            placeholder="Ej:correo@correo.com">
+
+                        
+                    </div>
+
+                    <!-- mensage de error: Agregar para la validacion con js -->
+                    <p class="formulario__input-error">El correo es incorrecto.</p>
+                </div>
+
+                <!-- Grupo: Contraseña -->
+                <div class="formulario__grupo" id="grupo__password">
+                    <label for="password" class="formulario__label">Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password" id="password">
+                       
+                    </div>
+
+                    <!-- mensage de error: Agregar para la validacion con js -->
+                    <p class="formulario__input-error">La contraseña es incorrecta.</p>
+                </div>
+
+                
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Ingresar</button>
+                    
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact">
+                <div class="title">Contacto</div>
+                <li class="list">
+                    <ul class="elem">
+                        Inmobiliaria Mi Rancho-<br>
+                        Nombre: Jorge Petruccelli
+                    </ul>
+                    <ul class="elem">
+                        Tel: (2241) 15-471517
+                    </ul>
+                    <ul class="elem">
+                        Email: inm-Mi-Rancho@gmail.com
+                    </ul>
+                </li>
+            </div>
+            <div class="direction">
+                <div class="title">Direccion</div>
+                <li class="list">
+                    <ul class="elem">
+                        Direccion: Libres del Sur Nº195
+                    </ul>
+                    <ul class="elem">
+                        Ciudad: Chascomus
+                    </ul>
+                    <ul class="elem">
+                        Pais: Argentina
+                    </ul>
+                </li>
+            </div>
+            <div class="company">
+                <div class="title">Compania</div>
+                <li class="list">
+                    <ul class="elem">
+                        <a href="../index.html">Inicio</a>
+                    </ul>
+                    <ul class="elem">
+                        <a href="#">Conocenos</a>
+                    </ul>
+                    <ul class="elem">
+                        <a href="#">Propiedades</a>
+                    </ul>
+                    <ul class="elem">
+                        <a href="#">Contactos</a>
+                    </ul>
+                </li>
+            </div>
+            <div class="social-media">
+                <div class="title">Seguinos</div>
+                <div class="redes-sociales">
+                    <a class="social-elems" href="https://api.whatsapp.com/send?phone=2241471517" target="_blank">
+                        <img src="../assets/img/logo/whatsapp.png" alt="logo whatsapp">
+                    </a>
+                    <a class="social-elems" href="https://www.facebook.com/cafeteria.brig" target="_blank">
+                        <img src="../assets/img/logo/facebook.png" alt="logo facebook">
+                    </a>
+
+                    <a class="social-elems" href="https://www.instagram.com/" target="_blank">
+                        <img src="../assets/img/logo/instagram.png" alt="logo instagram">
+                    </a>
+
+                    <a class="social-elems" href="mailto:inm-Mi-Rancho@gmail.com" target="_blank">
+                        <img src="../assets/img/logo/correo-electronico-vacio.png" alt="Mail">
+                    </a>
+                </div>
+                <!-- <div class="social-elems">
+                    <a class="social-elem" href="https://facebook.com" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="social-elem" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="social-elem" href="https://instagram.com" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="social-elem" href="https://linkedin.com" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+
+</html>
