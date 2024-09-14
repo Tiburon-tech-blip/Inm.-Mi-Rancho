@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Iconos de fonawesome*************************** -->
+    <script src="https://kit.fontawesome.com/2b1875b7b2.js" crossorigin="anonymous"></script>
+    
+    <!-- Talwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- links a las hojas de estilo -->
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/add_Edit_Addsong_Album.css">
+    <title>Bon Jovi</title>
+</head>
+ 
+<body>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+
+    <div class="sidebar">
+
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="../assets/img/logoCuenta.jpg" alt="Profile Image" />
+                <div class="user-detail">
+                    <h3>Alexis Larramendy</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- <header>My App</header> -->
+        <ul>
+            <li><a href=""><i class="fa-solid fa-headphones-simple"></i>Other Albums</a></li>
+            <li><a href="../pages/editAlbum.html"><i class="fa-regular fa-pen-to-square"></i>Edit Album</a></li>
+            <li><a href="../pages/addSong.html"><i class="fa-solid fa-music"></i>Add Songs</a></li>
+            <li><a href="../pages/login.html"><i class="fa-solid fa-share-from-square"></i>Log out</a></li>
+        </ul>
+    </div>
+
+    <section class="contacto" id="contacto">
+
+        <div class="contenedor-formulario">
+            <div class="nuevoAlbum">
+                <h2>Editar Álbum</h2>
+            </div>
+            <form id="formAddAlbum">
+                <div class="control-formulario">
+                    <label for="titulo" class="label">Titulo:</label><br>
+                    <input type="text" class="input-field" id="titulo" name="titulo"
+                        placeholder="Escribe el nuevo titulo del Álbum">
+
+                </div>
+
+                <div class="control-formulario">
+                    <label for="descripcion" class="label">Descripcion:</label><br>
+                    <textarea class="input-field" id="descripcion" name="descripcion"
+                        placeholder="Escribe la nueva  descripcion del Álbum" rows="10" cols="30"></textarea>
+
+                </div>
+
+                <div class="control-formulario">
+                    <label for="url" class="label">Url:</label><br>
+                    <input type="url" class="input-field" id="url" name=url" placeholder="Ingresa la nueva url de la imagen">
+
+                </div>
+
+                <div class="flex flex-row justify-around">
+                    <div class="btn-enviar">
+                        <button type="submit" class="submit-btn">Editar</button>
+                    </div>
+
+                    <div class="btn-enviar">
+                        <a href="../index.html#bonJovi1984" class="submit-btn text-center">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

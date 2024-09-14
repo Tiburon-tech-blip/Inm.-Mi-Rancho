@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #770202;
+    transition: all .5s ease;
+}
+
+.user-account {
+    margin-top: auto;
+    padding: 12px 10px;
+    
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    
+}
+
+/* Estilos de la imagen */
+.user-profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.user-profile h3 {
+    color: #fff;
+    padding-left: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    user-select: none;
+}
+
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+ul li:hover a {
+    padding-left: 60px;
+}
+
+.sidebar ul a i {
+    margin-right: 25px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #ec0707;
+    border-radius: 3px;
+}
+
+label #btn {
+    position: fixed;
+    z-index: 2222;
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -255px;
+    top: 17px;
+    font-size: 30px;
+    color: #fff;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+
+
+#check:checked~.sidebar {
+    left: 0;
+}
+
+#check:checked~label #btn {
+    left: 300px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked~label #cancel {
+    position: fixed;
+    left: 255px;
+
+}
+
+#check:checked~section {
+    margin-left: 300px;
+
+}
+
+section {
+    background-image: url("../img/fondo2.jpg"); 
+    /* background: #ff3772; */
+    background-position: center; 
+    background-size: cover;
+    height: 110vh;
+    transition: all .5s;
+}

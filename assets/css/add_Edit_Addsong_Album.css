@@ -1,0 +1,167 @@
+
+
+
+
+/*+++++++++++++++++++ Estilos del formulario+++++++++++++++++++++++++++++++++++ */
+
+.contacto {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-formulario .nuevoAlbum h2 {
+    text-align: center;
+    padding: 6rem 0 0.5rem 0;
+    font-size: 2rem;
+    color: #ec0707;
+}
+
+/* Contenedor */
+.contenedor-formulario {
+    width: 60%;
+    height: 100%; 
+    /* max-width: 40.75rem;  */
+    /* margin: 0 auto; */
+    /* Margen interno */
+    padding: 0.938rem;
+    
+       
+}
+
+/*Estilo para los label  */
+.contenedor-formulario .label {
+    /* Altura de linea de los label,peso de la fuente y color */
+    line-height: 2em;  
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #dd9206;
+}
+
+/* Estilo para la caja de texto */
+.contenedor-formulario textarea {
+    /* Altura minima de la caja */
+    min-height: 10rem; 
+    /* Tamaño de fuente dentro de las caja */
+    font-size: 1.1rem;
+    /* Peso de fuente dentro de la caja */
+    font-weight: 700;
+    padding-top: 10px;
+
+
+}
+
+/* Estilo de texto al escribir dentro del input */
+.contenedor-formulario input, textarea {
+    color: #ec0707;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+/* Color de texto de los input */
+.input-field::placeholder {
+    color: #ec0707;
+    font-weight: bold;
+}
+
+/*----------------------------------------------------------------*/
+/*Estilo para los inputs  */
+.input-field {
+    /* Para que ocupe 100% del contenedor */
+    width: 99%;
+    /* Cambio el cursor cuando, estoy arriba del imput*/
+    cursor: pointer;
+    /* Color de fondo */
+    background: rgba(230, 247, 252, 0.5);
+    color: #ec0707;
+    /* Borde de los imput, trasparentes, para que cuando hagamos foco pasen a otro color*/
+    border: 4px solid transparent;
+    /* Borde redondo de los input */
+    border-radius: 10px;
+
+    /* Altura de los input*/
+    height: 45px;
+    /* Margen interno del texto dentro del input */
+    padding: 0 40px 0px 10px;
+ 
+    line-height: 1.2em;
+
+    /* Para quitar el subrrallado */
+    border: none;
+
+
+    /* Tamaño de la funte dentro del input */
+    /*font-size: 1rem;*/
+
+    /* Establesco una transicion de .3s para todas las propiedades */
+    transition: .3s ease all;
+}
+
+/* Propiedad, para que cuando hago foco en el input hacemos un clik, haya una transicion del borde, y cambie el estilo de borde  */
+.input-field:focus {
+    border: 4px solid #ec0707;
+    /* Para quitar el subrrallado */
+    outline: none;
+    /* Sombra con color y trasparencia*/
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+/*-----------------------------------------------------------*/
+
+
+/*-----------------------boton-----------------------------*/
+/* Centro el Boton enviar*/
+.btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.submit-btn {
+    width: 150px;
+    padding: 10px;
+    margin: 20px 0px;
+
+    background-color: #e96767;
+    /* Le quito el borde por defecto */
+    border: none;
+    /* Borde redondeado del boton */
+    border-radius: 10px;
+    /* Color de texto del boton*/
+    color: #000000;
+    /* Tamaño de la funte del boton*/
+    font-size: 1rem;
+    /* Peso de la fuente , gruesita */
+    font-weight: bold;
+    /* Cambio del cursor al a ser foco */
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+/* Estado del hover, para la transicion del boton */
+.submit-btn:hover {
+    color: #fff;
+    background: #ec0707;
+    box-shadow: 0 0 5px #ec0707, 0 0 25px #ec0707, 0 0 50px #ec0707,
+        0 0 100px #ec0707;
+}
+
+
+
+@media only screen and (max-width:600px) {
+    /* Contenedor */
+.contenedor-formulario {
+    width: 100%;
+    height: 100%; 
+    /* max-width: 40.75rem;  */
+    /* margin: 0 auto; */
+    /* Margen interno */
+    padding: 0.938rem;
+    
+       
+}
+
+}
