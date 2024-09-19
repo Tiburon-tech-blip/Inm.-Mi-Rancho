@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+/* Estilo para el formulario */
+.form {   
+    background-color: #15172b;
+    border-radius: 20px;
+    height: auto;
+    padding: 20px;
+    width: 400px; 
+    
+}
+
+.form:hover {
+   box-shadow: 0 0 5px #dd9206, 0 0 25px #dd9206, 0 0 50px #dd9206,
+        0 0 100px #dd9206;
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* Estilo para Registro y el sub titulo */
+.title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.ic1 {
+    margin-top: 40px;
+}
+
+.ic2 {
+    margin-top: 30px;
+}
+
+/* Estlios para los input */
+.input {
+    /* color de fondo y borde de los input */
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    /* box-sizing: border-box; */
+    /* Color tamaño de fondo del campo al escribir */
+    color: #dd9206;
+    font-size: 18px;
+    /* Altura de cada input */
+    height: 100%;
+    outline: 0;
+    /* margen interno entre input */
+    padding: 4px 20px 0; 
+    /* Ancho de cada input */
+    width: 100%;
+}
+
+.cut {
+    /* color del fondo, borde, alto, ancho y posicion de los placeholder*/
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 65px;
+}
+
+/* ancho del fondo de los placeholder */
+.cut-short {
+    width: 50px;
+}
+
+.cut-short2 {
+    width: 83px;
+}
+
+.input:focus~.cut,
+.input:not(:placeholder-shown)~.cut {
+    transform: translateY(8px);
+}
+
+.placeholder {
+    /* Color del placeholder */
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+/* Color del placeholder cuando el campo esta completado o ocupado */
+.input:not(:placeholder-shown)~.placeholder {
+    color: #dd9206;
+}
+
+/* Color del placeholder al hacer click */
+.input:focus~.placeholder {
+    color: #ec0707;
+}
+
+
+.enviar {
+    display: flex;
+    justify-content: center;
+}
+
+#home {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+/* Estilos para el boton enviar */
+.submit {
+    border: 0;
+    background-color: #eff0f5;
+    padding: 10px 20px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+.submit:hover {
+    background: #ec0707;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 0 5px #ec0707, 0 0 25px #ec0707, 0 0 50px #ec0707,
+        0 0 100px #ec0707;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.pregunta {
+    text-align: center;
+    margin-top: 20px;
+    color:#fff;
+}
+
+.pregunta a {
+    color:#dd9206;
+    font-size: 1.1rem;
+}
+
+
+
